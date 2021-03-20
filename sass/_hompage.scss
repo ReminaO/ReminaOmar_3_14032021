@@ -1,0 +1,27 @@
+.header-localisation
+{
+    @include dark-header;
+}
+
+.restaurant-menu {
+    display: flex;
+    justify-content: center;
+    &__btn {
+        height: 350px;
+        width : 90%;
+        border-radius: 35px;
+        margin : 5px;
+        padding:0;
+    }
+    & img{
+        @include img-restaurant-home;
+    }
+    @media (max-width: $breakpoints) {
+        @include flex-column;
+    }
+}
+.btn-color {
+    padding:5px;
+    margin:0;
+}
+
