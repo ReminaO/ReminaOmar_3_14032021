@@ -1,45 +1,113 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Shrikhand&display=swap");
-.load__bar {
-  background-color: #99E2D0;
-  -webkit-animation: bars 1000ms backwards infinite ease-in-out alternate;
-          animation: bars 1000ms backwards infinite ease-in-out alternate;
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
 }
 
-.load__bar--1 {
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+          animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 
-.load__bar--2 {
-  -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  -webkit-animation: lds-ellipsis1 0.6s infinite;
+          animation: lds-ellipsis1 0.6s infinite;
 }
 
-.load__bar--3 {
-  -webkit-animation-delay: 600ms;
-          animation-delay: 600ms;
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+          animation: lds-ellipsis2 0.6s infinite;
 }
 
-.load__bar--4 {
-  -webkit-animation-delay: 800ms;
-          animation-delay: 800ms;
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+          animation: lds-ellipsis2 0.6s infinite;
 }
 
-.load__bar--5 {
-  -webkit-animation-delay: 1000ms;
-          animation-delay: 1000ms;
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  -webkit-animation: lds-ellipsis3 0.6s infinite;
+          animation: lds-ellipsis3 0.6s infinite;
 }
 
-.bloc_page {
-  max-width: 1200px;
-  margin: auto;
-  width: 90%;
+@-webkit-keyframes lds-ellipsis1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes lds-ellipsis3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes lds-ellipsis2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(24px, 0);
+            transform: translate(24px, 0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(24px, 0);
+            transform: translate(24px, 0);
+  }
 }
 
 .footer_container {
-  max-width: 1200px;
-  margin: auto;
-  width: 90%;
   background-color: #383838;
   color: white;
 }
@@ -52,6 +120,11 @@
   padding: 0;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 .bkg-light {
   background-color: #f7f7f7;
 }
@@ -60,8 +133,98 @@
   background-color: white;
 }
 
-.header-localisation {
-  background-color: #d1d1d1;
+@media all and (max-width: 699px) {
+  .header-bloc {
+    text-align: center;
+  }
+  .header-bloc img {
+    height: 50px;
+    width: 50%;
+  }
+  .presentation-bloc {
+    text-align: center;
+    width: 100%;
+  }
+  .presentation-bloc__localisation {
+    background-color: #d1d1d1;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  }
+  .presentation-bloc__localisation i {
+    margin-right: 15px;
+  }
+  .presentation-bloc__description {
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  }
+  .presentation-bloc__description--last {
+    border-radius: 30px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(50%), to(#9356DC));
+    background: linear-gradient(#FF79DA, 50%, #9356DC);
+    color: white;
+  }
+  .presentation-bloc__description--bold p {
+    font-weight: 700;
+  }
+  .presentation-bloc p {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    padding: 15px;
+  }
+  .functionality {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .functionality__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    background-color: #f7f7f7;
+  }
+  .functionality__btn__number {
+    border-radius: 100px;
+    background-color: #9356DC;
+    padding: 5px;
+    font-size: 15px;
+    position: absolute;
+    left: -2%;
+    color: white;
+  }
+  .functionality p {
+    font-family: 'Roboto', sans-serif;
+  }
+  .restaurant-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .restaurant-menu__btn {
+    height: 350px;
+    width: 90%;
+    border-radius: 35px;
+    margin: 5px;
+    padding: 0;
+  }
 }
 
 .restaurant-menu {
@@ -89,25 +252,7 @@
   padding-bottom: 0;
 }
 
-@media (max-width: 599px) {
-  .restaurant-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.btn-color {
+.restaurant-menu .btn-color {
   padding: 5px;
   margin: 0;
 }

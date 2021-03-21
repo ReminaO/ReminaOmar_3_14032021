@@ -41,23 +41,29 @@ $breakpoints:599px;
     display: flex;
 }
 
-.bloc_page {
-    max-width: 1200px;
-    margin: auto;
-    width: 90%;
+@mixin margin {
+    margin : 0;
+}
+
+@mixin shrikhand {
+    font-family: 'Shrikhand', cursive;
+}
+
+@mixin roboto {
+    font-family: 'Roboto', sans-serif;
 }
 
 .footer_container {
-    max-width: 1200px;
-    margin: auto;
-    width: 90%;
     @include dark-footer;
     & ul, a{
         @include footer-list;
     }
 }
 
-
+html, body {
+    margin: 0;
+    padding: 0;
+}
 .bkg-light{
     background-color: $background-color;
 }

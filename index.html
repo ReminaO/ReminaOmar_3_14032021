@@ -10,43 +10,59 @@
     
     <body>
         <div class="bloc_page">
-            <div class="load">
-                <div class="load__bar"></div>
-                <div class="load__bar"></div>
-                <div class="load__bar"></div>
-                <div class="load__bar"></div>
-                <div class="load__bar"></div>
-            </div>
+            <!--Animation-->
+            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
             <!--Header-->
-            <header>
-                <div>
-                    <img class="logo" src="images/logo.png" alt="logo"/>
-                </div>
-                <div>
-                    <p class=header-localisation><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
-                </div>
-                <div class="bkg-light">
-                    <p>Réservez le menu qui vous convient</p>
-                    <p>Découvrez des restaurant d'exception, selectionnés par nos soins.</p>
-                    <p>Explorez nos restaurants</p>
-                </div>
+            <header class="header-bloc">
+                <img src="images/logo.png" alt="logo"/>
             </header>
+            <section class="presentation-bloc">
+                <div class="presentation-bloc__localisation">
+                    <p><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
+                </div>
+                <div class="presentation-bloc__description bkg-light">
+                    <p claas="presentation-bloc__description--bold">Réservez le menu qui vous convient</p>
+                    <p>Découvrez des restaurant d'exception, selectionnés par nos soins.</p>
+                    <p class="presentation-bloc__description--last">Explorez nos restaurants</p>
+                </div>
+            </section>
 
             <!-- Section Fonctionnement-->
             <section class="functionality">
                 <h2>Fonctionnement</h2>
                 <div>
                     <div class="functionality__btn bkg-light">
-                        <div><p>1</p></div>
-                        <div><i class="fas fa-mobile-alt"></i> <p>Choisissez un restaurant</p></div>
+                        <div>
+                            <p class="functionality__btn__number">1</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-mobile-alt functionality__btn__image"></i>
+                        </div>
+                        <div>
+                            <p>Choisissez un restaurant</p>
+                        </div>
                     </div>
                     <div class="functionality__btn bkg-light">
-                        <div><p>2</p></div>
-                        <div><i class="fas fa-list-ul"></i><p>Composez votre menu</p></div>
+                        <div>
+                            <p class="functionality__btn__number">2</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-list-ul functionality__btn__image"></i>
+                        </div>
+                        <div>
+                            <p>Composez votre menu</p>
+                        </div>
                     </div>
                     <div class=" functionality__btn bkg-light">
-                        <div><p>3</p></div>
-                        <div><i class="fas fa-store"></i><p>Dégustez au restaurant</p></div>
+                        <div>
+                            <p class="functionality__btn__number">3</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-store functionality__btn__image"></i>
+                        </div>
+                        <div>
+                            <p>Dégustez au restaurant</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -115,7 +131,7 @@
                     <li><a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a></li>
                     <li><a href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a></li>
                     <li><a href="#">Mentions légales</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
                 </ul>
             </div>
         </footer>
