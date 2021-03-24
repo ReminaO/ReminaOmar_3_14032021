@@ -1,43 +1,50 @@
+h2 {
+    @include roboto;
+}
 @media all and (max-width: 699px) {
     .header-bloc {
         text-align: center;
+        -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+        box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);   
         & img {
             height: 50px;
             width: 50%;
-            margin-top: 0;
+            object-fit: contain;
         }
     }
 
     .presentation-bloc {
         text-align: center;
-        width: 100%;
         &__localisation {
             @include dark-header;
-            -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
-            box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
             & i {
                 margin-right: 15px;
             }
+            & p{
+                font-weight: bold;
+            }
         }
         &__description {
-            -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
-            box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
             &--last {
                 border-radius: 30px;
                 background: linear-gradient($color-secondary, 50%, $color-primary);
-                color: white;    
+                color: white;  
+                width: 12em;
+                text-align: center; 
+                position : relative;
+                left:20%;
+                margin-bottom: 15px;
             }
             &--bold {
-                & p{
-                    font-weight: 700;
-                }
+                font-weight: bold;
+                font-size: 25px;
             }
         }
+        
         & p {
             @include  margin;
             @include roboto;
             padding: 15px;
-            
         }
     }
 
@@ -47,9 +54,9 @@
         &__btn{
             display: flex;
             border-radius: 20px;
-            -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
-            box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
-            margin : 10px;
+            -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+            margin : 20px;
             justify-content: center;
             position: relative;
             background-color: $background-color;
@@ -62,42 +69,66 @@
                 left: -2%;
                 color:white;
             }
+            & i{
+                position: relative;
+                top: 35%;
+                left : -100%;
+            }
         }
         & p {
             @include roboto;
         }
+        
     }
     .restaurant-menu {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
         &__btn {
             height: 350px;
-            width : 90%;
+            width : 100%;
             border-radius: 35px;
-            margin : 5px;
             padding:0;
+            margin:0;
+        }
+        & img{
+            @include img-restaurant-home;
+        
+    }
+        & p {
+            @include  margin;
+            @include roboto;
+        }
+    }
+    
+    .btn-color {
+        &--bold {
+            font-weight: bold;
+        }
+        & i {
+            font-size: 30px;
+            position: relative;
+            left: 85%;
+            bottom: 50%;
         }
     }
 }
-
-
 .restaurant-menu {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     &__btn {
         height: 350px;
         width : 90%;
         border-radius: 35px;
-        margin : 5px;
         padding:0;
+        margin:0;
     }
     & img{
         @include img-restaurant-home;
     
-}
-.btn-color {
-    padding:5px;
-    margin:0;
-}
+    }
+    .btn-color {
+        margin:0;
+    }
 }
