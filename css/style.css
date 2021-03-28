@@ -1,0 +1,39 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.fa-heart:hover {
+    background: linear-gradient(#FF79DA, 50%, #9356DC);
+    padding: 0;
+    margin: 0;
+}
+@media all and (max-width: 699px) {
+    .restaurant-bloc {
+        margin-top: 15px;
+        padding-top: 20px;
+    }
+
+    .heart-btn {
+        font-size: 20px;
+        position: relative;
+        left: 85%;
+        bottom: 35px;
+    }
+
+    .heart-btn-top {
+        font-size: 20px;
+        position: relative;
+        left: 290px;
+        bottom: 60px;
+    }
+}
+
+/*@media all and (min-width: 960px) and (max-width: 1200px){
+
+    .restaurant-menu {
+        display: flex;
+        justify-content: center;
+    }
+}
+*/

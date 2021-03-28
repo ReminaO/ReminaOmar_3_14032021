@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/style.css" />
         <meta name="viewport" content="width=device-width" />
         <script src="https://kit.fontawesome.com/9c5d3adeda.js" crossorigin="anonymous"></script>                        
         <title>Accueil</title>
@@ -11,10 +12,12 @@
     <body>
         <div class="bloc_page">
             <!--Animation-->
-           <!-- <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>-->
+            <div class="loader"></div>
             <!--Header-->
             <header class="header-bloc">
-                <img src="images/logo.png" alt="logo"/>
+                <div class="header-bloc__shadow">
+                    <img src="images/logo.png" alt="logo"/>
+                </div>
             </header>
             <section class="presentation-bloc">
                 <div class="presentation-bloc__localisation">
@@ -69,56 +72,50 @@
 
             <!-- Section Carte Restaurants-->
             <section class="restaurant-bloc bkg-light">
-                    <h2> Restaurants</h2>
-                    <div class="restaurant-menu">
-                    <div>
-                        <div class="restaurant-menu__btn">
-                            <div>
-                                <a href="la_palette_du_gout.html"><img src="images/palette.jpg" alt="La palette du goût" /></a>
-                                <div class="btn-color">
-                                    <div>
-                                        <p class="btn-color--bold">La palette du goût</p>
-                                        <p>Ménilmontant</p>
-                                    </div>
-                                    <div class="heart-btn"><i class="far fa-heart"></i></div>
-                                </div>
-                                <div><p>Nouveau</p></div>
-                            </div>
-                        </div>
-                        <div class="restaurant-menu__btn">
-                            <a href="la_note_enchantee.html"><img src="images/note.jpg" alt="La note enchantée" /></a>
+                <h2> Restaurants</h2>
+                <div class="restaurant-menu">
+                    <div class="restaurant-menu__btn">
+                        <a href="la_palette_du_gout.html"><img src="images/palette.jpg" alt="La palette du goût" />
                             <div class="btn-color">
-                                <div>
+                                    <p class="btn-color--bold">La palette du goût</p>
+                                    <p>Ménilmontant</p>
+                            </div> 
+                        </a>
+                        <div><p class="restaurant-menu__btn--new">Nouveau</p></div>       
+                        <i class="far fa-heart heart-btn-top"></i> 
+                    </div>   
+                        
+                    <div class="restaurant-menu__btn">
+                        <a href="la_note_enchantee.html"><img src="images/note.jpg" alt="La note enchantée" />
+                            <div class="btn-color">
                                     <p class="btn-color--bold">La note enchantée</p>
                                     <p>Charonne</p>
-                                </div>
-                                <div class="heart-btn"><i class="far fa-heart"></i></div>
-                            </div>
-                            <div><p>Nouveau</p></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="restaurant-menu__btn">
-                            <a href="a_la_francaise.html"><img src="images/francaise.jpg" alt="A la française" /></a>
+                            </div> 
+                        </a>
+                        <div><p class="restaurant-menu__btn--new">Nouveau</p></div>       
+                        <i class="far fa-heart heart-btn-top"></i>
+                    </div> 
+                    <div class="restaurant-menu__btn">
+                        <a href="a_la_francaise.html"><img src="images/francaise.jpg" alt="A la française" />
                             <div class="btn-color">
-                                <div>
-                                    <p class="btn-color--bold">A la française</p>
-                                    <p>Citée Rouge</p>
-                                </div>
-                                <div class="heart-btn restaurant-btn"><i class="far fa-heart"></i></div>
-                            </div>
-                        </div>
-                        <div class="restaurant-menu__btn">
-                            <a href="le_delice_des_sens.html"><img src="images/delice.jpg" alt="Le délice des sens" /></a>
-                            <div class="btn-color">
-                                <div >
-                                    <p class="btn-color--bold">Le délice des sens</p>
-                                    <p>Folie-Méricourt</p>
-                                </div>
-                                <div class="heart-btn restaurant-btn"><i class="far fa-heart"></i></div>
-                            </div>
-                        </div>      
+                                <p class="btn-color--bold">A la française</p>
+                                <p>Citée Rouge</p>
+                            </div>    
+                        </a>        
+                        <i class="far fa-heart heart-btn"></i>
+                        
                     </div>
+                    <div class="restaurant-menu__btn">
+                        <a href="le_delice_des_sens.html"><img src="images/delice.jpg" alt="Le délice des sens" />
+                            <div class="btn-color">
+                                <p class="btn-color--bold">Le délice des sens</p>
+                                <p>Folie-Méricourt</p>
+                            </div>    
+                        </a>        
+                        <div><i class="far fa-heart heart-btn"></i></div>
+                        </div>
+                        
+                    </div> 
                 </div>    
             </section>
         </div>
