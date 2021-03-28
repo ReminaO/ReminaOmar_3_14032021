@@ -114,7 +114,8 @@ h4 {
     text-align: center;
     font-size: 15px;
     position: absolute;
-    right: 320px;
+    right: 95%;
+    top: 30%;
     color: white;
   }
   .functionality__btn i {
@@ -125,7 +126,7 @@ h4 {
   .functionality p {
     font-family: 'Roboto', sans-serif;
   }
-  .restaurant-menu {
+  .restaurant-menu_bloc {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -195,152 +196,176 @@ h4 {
   }
 }
 
-/*@media all and (min-width: 950px) and (max-width: 1200px) {
-    .header-bloc {
-        text-align: center;
-        z-index: 3;
-        &__shadow{
-            -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
-            box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); 
-        } 
-        & img {
-            height: 50px;
-            width: 50%;
-            object-fit: contain;
-        }
-    }
-
-    .presentation-bloc {
-        text-align: center;
-        z-index: 1;
-        &__localisation {
-            @include dark-header;
-            & i {
-                margin-right: 15px;
-            }
-            & p{
-                font-weight: bold;
-            }
-        }
-        &__description {
-            &--last {
-                border-radius: 30px;
-                background: linear-gradient($color-secondary, 50%, $color-primary);
-                color: white;  
-                width: 12em;
-                text-align: center; 
-                position : relative;
-                left:20%;
-                margin-bottom: 15px;
-            }
-            &--bold {
-                font-weight: bold;
-                font-size: 25px;
-            }
-        }
-        
-        & p {
-            @include  margin;
-            @include roboto;
-            padding: 15px;
-        }
-    }
-
-    .functionality{
-        display: flex;
-        flex-direction: column;
-        
-        &__btn{
-            display: flex;
-            border-radius: 20px;
-            -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-            box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-            margin : 20px;
+@media all and (min-width: 1200px) {
+  .header-bloc {
+    text-align: center;
+    z-index: 3;
+  }
+  .header-bloc__shadow {
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  }
+  .header-bloc img {
+    height: 75px;
+    width: 50%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .presentation-bloc {
+    text-align: center;
+    z-index: 1;
+  }
+  .presentation-bloc__localisation {
+    background-color: #d1d1d1;
+  }
+  .presentation-bloc__localisation i {
+    margin-right: 15px;
+  }
+  .presentation-bloc__localisation p {
+    font-weight: bold;
+  }
+  .presentation-bloc__description--last {
+    border-radius: 30px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(50%), to(#9356DC));
+    background: linear-gradient(#FF79DA, 50%, #9356DC);
+    color: white;
+    width: 12em;
+    text-align: center;
+    position: relative;
+    left: 45%;
+    margin-bottom: 15px;
+  }
+  .presentation-bloc__description--bold {
+    font-weight: bold;
+    font-size: 35px;
+  }
+  .presentation-bloc p {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    padding: 15px;
+  }
+  .functionality {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .functionality__btn {
+    text-align: center;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
             justify-content: center;
-            position: relative;
-            background-color: $background-color;
-            & :hover{
-                background-color:  lighten($color-primary, 30%);
-            }
-            &__number {
-                border-radius: 100px;
-                background-color: $color-primary;
-                width : 25px;
-                height : 25px;
-                text-align: center;
-                font-size: 15px;
-                position: absolute;
-                right: 320px;
-                color:white;
-            }
-            & i{
-                position: relative;
-                top: 35%;
-                right :20px;
-            }
-        }
-        & p {
-            @include roboto;
-        }
-        
-    }
-    .restaurant-menu {
-        display: flex;
-        justify-content: center;
-        &__btn {
-            height: 290px;
-            width : 50%;
-            &--new{
-                position : relative;
-                bottom: 230px;
-                left: 250px;
-                width: 20%;
-                background-color: $color-third;
-                @include roboto;
-                color: darken($color-third, 40%);
-                font-weight: bold;
-            }    
-        }
-        & img{
-        @include img-restaurant-home;
-        border-radius: 20px 20px 0 0;
-        -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-        box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-        padding: 0;
-        margin: 0;
-    }
-        & p {
-            @include  margin;
-            @include roboto;
-            padding: 3px;
-        }
-        & a{
-            text-decoration: none;
-            @include roboto;
-            color: black;
-        }
-    }
-    
-    .btn-color {
-        border-radius: 0 0 20px 20px;
-        -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-        box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-        margin:0;
-        padding: 0;
-        &--bold {
-            font-weight: bold;
-        }
-    }
-
-    .footer_container{
-        padding: 15px;
-        & li{
-            padding:5px;
-        }
-        & i {
-            padding-right: 5px;
-            font-size:15px;
-        }
-    }
-}*/
+    position: relative;
+    left: 25%;
+    width: 50%;
+    height: 50px;
+    background-color: #f7f7f7;
+  }
+  .functionality__btn :hover {
+    background-color: #e4d5f6;
+  }
+  .functionality__btn__number {
+    border-radius: 100px;
+    background-color: #9356DC;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    right: 98%;
+    top: 30%;
+    color: white;
+  }
+  .functionality__btn i {
+    display: inline;
+    float: left;
+    line-height: 50px;
+    position: relative;
+    left: 20%;
+  }
+  .functionality p {
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+    line-height: 50px;
+  }
+  .restaurant-menu_bloc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .restaurant-menu__btn {
+    height: 290px;
+    width: 30%;
+    margin: 15px;
+  }
+  .restaurant-menu__btn--new {
+    position: relative;
+    bottom: 230px;
+    left: 450px;
+    width: 13%;
+    background-color: #99E2D0;
+    font-family: 'Roboto', sans-serif;
+    color: #278870;
+    font-weight: bold;
+  }
+  .restaurant-menu img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 200px;
+    width: 100%;
+    padding-bottom: 0;
+    border-radius: 20px 20px 0 0;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 0;
+    margin: 0;
+  }
+  .restaurant-menu p {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    padding: 3px;
+  }
+  .restaurant-menu a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+  }
+  .btn-color {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 0 0 20px 20px;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin: 0;
+    padding: 0;
+  }
+  .btn-color--bold {
+    font-weight: bold;
+  }
+  .footer_container {
+    padding: 15px;
+  }
+  .footer_container li {
+    padding: 5px;
+  }
+  .footer_container i {
+    padding-right: 5px;
+    font-size: 15px;
+  }
+}
 /*# sourceMappingURL=main.css.map */

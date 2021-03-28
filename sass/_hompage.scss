@@ -83,7 +83,8 @@ h4{
                 text-align: center;
                 font-size: 15px;
                 position: absolute;
-                right: 320px;
+                right: 95%;
+                top: 30%;
                 color:white;
             }
             & i{
@@ -98,9 +99,12 @@ h4{
         
     }
     .restaurant-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        
+        &_bloc {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         &__btn {
             height: 290px;
             width : 90%;
@@ -158,16 +162,18 @@ h4{
     }
 }
 
-/*@media all and (min-width: 950px) and (max-width: 1200px) {
+
+@media all and (min-width: 1200px) {
+    
     .header-bloc {
         text-align: center;
         z-index: 3;
-        &__shadow{
+        &__shadow {
             -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
             box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); 
         } 
         & img {
-            height: 50px;
+            height: 75px;
             width: 50%;
             object-fit: contain;
         }
@@ -193,12 +199,12 @@ h4{
                 width: 12em;
                 text-align: center; 
                 position : relative;
-                left:20%;
+                left:45%;
                 margin-bottom: 15px;
             }
             &--bold {
                 font-weight: bold;
-                font-size: 25px;
+                font-size: 35px;
             }
         }
         
@@ -214,14 +220,18 @@ h4{
         flex-direction: column;
         
         &__btn{
-            display: flex;
+            text-align: center;
             border-radius: 20px;
             -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
             box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
             margin : 20px;
             justify-content: center;
             position: relative;
+            left: 25%;
+            width: 50%;
+            height: 50px;
             background-color: $background-color;
+
             & :hover{
                 background-color:  lighten($color-primary, 30%);
             }
@@ -233,31 +243,40 @@ h4{
                 text-align: center;
                 font-size: 15px;
                 position: absolute;
-                right: 320px;
+                right: 98%;
+                top: 30%;
                 color:white;
             }
             & i{
+                display: inline;
+                float: left;
+                line-height: 50px;
                 position: relative;
-                top: 35%;
-                right :20px;
+                left: 20%;
             }
         }
         & p {
             @include roboto;
+            display: inline;
+            line-height: 50px;
         }
         
     }
     .restaurant-menu {
-        display: flex;
-        justify-content: center;
+        &_bloc {
+            display: flex;
+            justify-content: center;
+        }
+        ;
         &__btn {
             height: 290px;
-            width : 50%;
+            width : 30%;
+            margin : 15px;
             &--new{
                 position : relative;
                 bottom: 230px;
-                left: 250px;
-                width: 20%;
+                left: 450px;
+                width: 13%;
                 background-color: $color-third;
                 @include roboto;
                 color: darken($color-third, 40%);
@@ -285,6 +304,8 @@ h4{
     }
     
     .btn-color {
+        display:flex;
+        flex-direction: column;
         border-radius: 0 0 20px 20px;
         -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
         box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
@@ -305,4 +326,4 @@ h4{
             font-size:15px;
         }
     }
-}*/
+}
