@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="css/main.css" />
         <meta name="viewport" content="width=device-width" />
         <script src="https://kit.fontawesome.com/9c5d3adeda.js" crossorigin="anonymous"></script>                    
         <title>A la Française</title>
@@ -12,104 +12,101 @@
         <div class="bloc_page">
            <!--Animation-->
            <div class="loader"></div>
-            <header class="header-bloc">
-                <div>
+           <header class="restaurant-header-bloc">
+                <div class="restaurant-header-bloc__logo">
                     <a href="index.html"><i class="fas fa-arrow-left"></i></a>
-                    <img src="images/logo.png" alt="logo"/>
+                    <img class="restaurant-header-bloc__logo__img" src="images/logo.png" alt="logo"/>
                 </div>
-                <img src="images/francaise.jpg" alt="A la Française" />
+                <img class="restaurant-header-bloc__img" src="images/francaise.jpg" alt="A la Française" />
             </header>
-            <section>
-                <div class="bkg-light">
-                    <div>
-                        <h2>A la Française</h2>
-                        <div class="heart-btn"><i class="far fa-heart"></i></div>
-                    </div>
+            <section class="restaurant-menu_bloc bkg-light">
+                <div class="restaurant-menu_bloc--title">
+                    <h2>A la Française</h2>
+                    <i class="far fa-heart heart-btn"></i>
+                </div>
+                <div>
                     <div class="starter">
-                        <p>Entrées</p>
-                        <div class="btn-color">
-                            <p>Tartare de poulpe acidulé</p>
+                        <p class="upper-case">Entrées</p>
+                        <div class="restaurant-menu_bloc__btn">
+                            <p class="restaurant-menu_bloc__btn--bold">Tartare de poulpe acidulé</p>
                             <div class="price">
                                 <p>Aux zestes d'orange</p>
                                 <p>25€</p>
+                                <span><i class="fas fa-check-circle"></i></span>
                             </div>
-                            <span><i class="fas fa-check-circle"></i></span>
                         </div>
-                        <div class="btn-color">
-                            <p>Velouté de légumes d'antan</p>
+                        <div class="restaurant-menu_bloc__btn">
+                            <p class="restaurant-menu_bloc__btn--bold">Velouté de légumes d'antan</p>
                             <div class="price">
                                 <p>Carotte, panais, topinambour</p>
                                 <p>35€</p>
+                                <span><i class="fas fa-check-circle"></i></span>
                             </div>
-                            <span><i class="fas fa-check-circle"></i></span>
                         </div>
-                        <div class="btn-color">
-                            <p>Soupe à l'oignon</p>
+                        <div class="restaurant-menu_bloc__btn">
+                            <p class="restaurant-menu_bloc__btn--bold">Soupe à l'oignon</p>
                             <div class="price">
                                 <p>Revisitée</p>
                                 <p>20€</p>
+                                <span><i class="fas fa-check-circle"></i></span>
                             </div>
-                            <span><i class="fas fa-check-circle"></i></span>
                         </div>
                     </div>
                     <div class="main_dish">
-                        <p>Plats</p>
-                        <div class="btn-color">
-                            <p>Coquilles Saint-Jacques</p>
+                        <p class="upper-case">Plats</p>
+                        <div class="restaurant-menu_bloc__btn">
+                            <p class="restaurant-menu_bloc__btn--bold">Coquilles Saint-Jacques</p>
                             <div class="price">
                                 <p>Accompagnées d'une purée de panais</p>
                                 <p>40€</p>
+                                <span><i class="fas fa-check-circle"></i></span>
                             </div>
-                            <span><i class="fas fa-check-circle"></i></span>
                         </div>
-                        <div class="btn-color">
-                            <p>Magret de canard</p>
+                        <div class="restaurant-menu_bloc__btn">
+                            <p class="restaurant-menu_bloc__btn--bold">Magret de canard</p>
                             <div class="price">
                                 <p>Et parmentier de pommes de terre</p>
                                 <p>35€</p>
+                                <span><i class="fas fa-check-circle"></i></span>
                             </div>
-                            <span><i class="fas fa-check-circle"></i></span>
                         </div>
-                        <div class="btn-color">
-                            <p>Pigeonneau d’Ille-et-Vilaine</p>
+                        <div class="restaurant-menu_bloc__btn">
+                            <p class="restaurant-menu_bloc__btn--bold">Pigeonneau d’Ille-et-Vilaine</p>
                             <div class="price">
                                 <p>Sur son lit de gnocchis aux légumes</p>
                                 <p>44€</p>
+                                <span><i class="fas fa-check-circle"></i></span>
                             </div>
-                            <span><i class="fas fa-check-circle"></i></span>
-                        </div>
                     </div>
                     <div class="desserts">
-                        <p>Desserts</p>
-                        <div class="btn-color">
-                            <p>Pétales de violettes glacés</p>
+                        <p class="upper-case">Desserts</p>
+                        <div class="restaurant-menu_bloc__btn">
+                            <p class="restaurant-menu_bloc__btn--bold">Pétales de violettes glacés</p>
                             <div class="price">
                                 <p>Et purée de noisettes</p>
                                 <p>18€</p>
+                                <span><i class="fas fa-check-circle"></i></span>
                             </div>
-                            <span><i class="fas fa-check-circle"></i></span>
                         </div>
-                        <div class="btn-color">
-                            <p>Fondant au chocolat</p>
+                        <div class="restaurant-menu_bloc__btn">
+                            <p class="restaurant-menu_bloc__btn--bold">Fondant au chocolat</p>
                             <div class="price">
                                 <p>Revisité</p>
                                 <p>22€</p>
+                                <span><i class="fas fa-check-circle"></i></span>
                             </div>
-                            <span><i class="fas fa-check-circle"></i></span>
                         </div>
-                        <div class="btn-color">
-                            <p>Millefeuille croustillant</p>
+                        <div class="restaurant-menu_bloc__btn">
+                            <p class="restaurant-menu_bloc__btn--bold">Millefeuille croustillant</p>
                             <div class="price">
                                 <p>Myrtilles et pâte d’amande</p>
                                 <p>23€</p>
+                                <span><i class="fas fa-check-circle"></i></span>
                             </div>
-                            <span><i class="fas fa-check-circle"></i></span>
                         </div>
                     </div>
-                    <div>
-                        <a href="#"><p>Commander</p></a>
-                    </div>
                 </div>
+                <a class="order-btn" href="#">Commander</a>
             </section>
         </div>
 
