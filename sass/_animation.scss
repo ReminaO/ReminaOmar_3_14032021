@@ -19,3 +19,8 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.fa-check-circle {
+  color :#99E2D0;
+  background-color: darken(#99E2D0, 10%);
+}
