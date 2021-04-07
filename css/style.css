@@ -5,9 +5,8 @@ html, body {
 
 
 .fa-heart:hover {
-    background: linear-gradient(#FF79DA, 50%, #9356DC);
-    padding: 0;
-    margin: 0;
+    fill:#9356DC;
+    stroke:  #FF79DA;
 }
 @media all and (max-width: 699px) {
     .restaurant-bloc {

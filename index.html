@@ -12,7 +12,9 @@
     <body>
         <div class="bloc_page">
             <!--Animation-->
-            <div class="loader"></div>
+            <div id="overlay">
+                <div class="loader"></div>
+            </div>
             <!--Header-->
             <header class="header-bloc">
                 <div class="header-bloc__shadow">
@@ -33,32 +35,32 @@
             <!-- Section Fonctionnement-->
             <section class="functionality">
                 <h2>Fonctionnement</h2>
-                <div>
-                    <div class="functionality__btn ">
-                        <div>
-                            <span class="functionality__btn__number">1</span>
-                        </div>
-                        <div>
-                            <p><i class="fas fa-mobile-alt functionality__btn__image"></i>Choisissez un restaurant</p>
-                        </div>
-                    </div>
                     <div class="functionality__btn">
-                        <div>
-                            <span class="functionality__btn__number">2</span>
+                        <div class="functionality__btn__menu">
+                            <div>
+                                <p class="functionality__btn__number">1</p>
+                            </div>
+                            <div>
+                                <p><i class="fas fa-mobile-alt functionality__btn__image"></i>Choisissez un restaurant</p>
+                            </div>
                         </div>
-                        <div>
-                            <p><i class="fas fa-list-ul functionality__btn__image"></i>Composez votre menu</p>
+                        <div class="functionality__btn__menu">
+                            <div>
+                                <p class="functionality__btn__number">2</p>
+                            </div>
+                            <div>
+                                <p><i class="fas fa-list-ul functionality__btn__image"></i>Composez votre menu</p>
+                            </div>
+                        </div>
+                        <div class="functionality__btn__menu">
+                            <div>
+                                <p class="functionality__btn__number">3</p>
+                            </div>
+                            <div>
+                                <p><i class="fas fa-store functionality__btn__image"></i>Dégustez au restaurant</p>
+                            </div>
                         </div>
                     </div>
-                    <div class=" functionality__btn">
-                        <div>
-                            <span class="functionality__btn__number">3</span>
-                        </div>
-                        <div>
-                            <p><i class="fas fa-store functionality__btn__image"></i>Dégustez au restaurant</p>
-                        </div>
-                    </div>
-                </div>
             </section>
 
             <!-- Section Carte Restaurants-->

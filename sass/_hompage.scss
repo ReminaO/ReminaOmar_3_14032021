@@ -1,5 +1,6 @@
 h2 {
     @include roboto;
+    padding-left: 20px;
 }
 h4{
     @include shrikhand;
@@ -11,7 +12,7 @@ h4{
 @media all and (max-width: 699px) {
     .header-bloc {
         text-align: center;
-        z-index: 3;
+        z-index: 99998;
         &__shadow{
             -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
             box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); 
@@ -65,6 +66,12 @@ h4{
         
         &__btn{
             display: flex;
+            flex-direction: column;
+            & :hover{
+                background-color:  lighten($color-primary, 30%);
+            }
+            &__menu{
+            display: flex;
             border-radius: 20px;
             -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
             box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
@@ -72,19 +79,16 @@ h4{
             justify-content: center;
             position: relative;
             background-color: $background-color;
-            & :hover{
-                background-color:  lighten($color-primary, 30%);
             }
             &__number {
                 border-radius: 100px;
                 background-color: $color-primary;
-                width : 25px;
-                height : 25px;
+                padding: 5px 10px 5px 10px ;
                 text-align: center;
                 font-size: 15px;
                 position: absolute;
-                right: 95%;
-                top: 30%;
+                right: 315px;
+                top: -3px;
                 color:white;
             }
             & i{
@@ -167,7 +171,7 @@ h4{
     
     .header-bloc {
         text-align: center;
-        z-index: 3;
+        z-index: 99998;
         &__shadow {
             -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
             box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); 
@@ -216,43 +220,42 @@ h4{
     }
 
     .functionality{
-        display: flex;
-        flex-direction: column;
         
         &__btn{
-            text-align: center;
-            border-radius: 20px;
-            -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-            box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-            margin : 20px;
-            justify-content: center;
-            position: relative;
-            left: 25%;
-            width: 50%;
-            height: 50px;
-            background-color: $background-color;
+            display: flex;
+            flex-direction: row;
 
             & :hover{
                 background-color:  lighten($color-primary, 30%);
             }
+            &__menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            border-radius: 20px;
+            -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+            margin : 40px;
+            text-align: center;
+            width: 30%;
+            height: 50px;
+            background-color: $background-color;
+            }
             &__number {
                 border-radius: 100px;
                 background-color: $color-primary;
-                width : 25px;
-                height : 25px;
+                padding: 5px 10px 5px 10px;
                 text-align: center;
                 font-size: 15px;
-                position: absolute;
-                right: 98%;
-                top: 30%;
+                position: relative;
+                right: 190px;
+
+
                 color:white;
             }
             & i{
-                display: inline;
-                float: left;
-                line-height: 50px;
                 position: relative;
-                left: 20%;
+                right: 10%;
             }
         }
         & p {
