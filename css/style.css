@@ -8,6 +8,7 @@ html, body {
     fill:#9356DC;
     stroke:  #FF79DA;
 }
+
 @media all and (max-width: 699px) {
     .restaurant-bloc {
         margin-top: 15px;

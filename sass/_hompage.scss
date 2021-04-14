@@ -37,6 +37,7 @@ h4{
             }
         }
         &__description {
+            
             &--last {
                 border-radius: 30px;
                 background: linear-gradient($color-secondary, 50%, $color-primary);
@@ -45,7 +46,6 @@ h4{
                 text-align: center; 
                 position : relative;
                 left:20%;
-                margin-bottom: 15px;
             }
             &--bold {
                 font-weight: bold;
@@ -249,8 +249,6 @@ h4{
                 font-size: 15px;
                 position: relative;
                 right: 190px;
-
-
                 color:white;
             }
             & i{
@@ -270,15 +268,13 @@ h4{
             display: flex;
             justify-content: center;
         }
-        ;
+        
         &__btn {
             height: 290px;
             width : 30%;
             margin : 15px;
             &--new{
-                position : relative;
-                bottom: 230px;
-                left: 450px;
+                transform: translate(435px, -230px);
                 width: 13%;
                 background-color: $color-third;
                 @include roboto;
@@ -297,8 +293,8 @@ h4{
         & p {
             @include  margin;
             @include roboto;
-            padding: 3px;
-        }
+            padding: 5px;
+    }
         & a{
             text-decoration: none;
             @include roboto;

@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Shrikhand&display=swap");
 @media all and (min-width: 1200px) {
+  .bloc_page {
+    position: relative;
+    overflow: hidden;
+  }
   .loader {
     border: 16px solid #f7f7f7;
     border-radius: 50%;
@@ -8,24 +12,30 @@
     border-bottom: 16px solid #99E2D0;
     width: 120px;
     height: 120px;
-    -webkit-animation: spin 5s linear both;
-    animation: spin 5s linear both;
-    position: fixed;
-    left: 900px;
-    top: 400px;
-    z-index: 9999;
+    -webkit-animation: spin 10s linear both;
+    animation: spin 10s linear both;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    z-index: 2;
   }
   #overlay {
-    position: absolute;
-    top: 0px;
-    left: 0px;
+    position: fixed;
+    display: block;
     width: 100%;
-    height: 150%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: white;
     opacity: 1;
-    z-index: 9999;
-    -webkit-animation: overlay 5s both;
-            animation: overlay 5s both;
+    z-index: 2;
+    -webkit-animation: overlay 10s both;
+    animation: overlay 10s both;
   }
   @-webkit-keyframes overlay {
     0% {
@@ -35,9 +45,8 @@
       opacity: 1;
     }
     100% {
-      -webkit-transform: translateX(50000px);
-              transform: translateX(50000px);
       opacity: 0;
+      z-index: -10;
     }
   }
   @keyframes overlay {
@@ -49,6 +58,7 @@
     }
     100% {
       opacity: 0;
+      z-index: -10;
     }
   }
   @-webkit-keyframes spin {
@@ -85,111 +95,165 @@
       opacity: 0;
     }
   }
-  .fa-check-circle:hover {
+  .restaurant-menu_blocs__btn :hover span {
     color: white;
     background-color: #99E2D0;
-    padding: 20px;
-    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0;
+    height: 35px;
     position: relative;
-    bottom: 20px;
-    overflow: hidden;
-    -webkit-animation: slide 10s ease-in-out;
-    animation: slide 10s ease-in-out;
+    bottom: 8px;
+    -webkit-animation: slide 10s ease alternate both;
+            animation: slide 10s ease alternate both;
+  }
+  .price span {
+    opacity: 0;
   }
   @-webkit-keyframes slide {
-    0% {
+    from {
+      opacity: 1;
+      -webkit-transform: translateX(45px);
+              transform: translateX(45px);
+    }
+    to {
+      opacity: 1;
       -webkit-transform: translateX(0);
               transform: translateX(0);
-      opacity: 1;
-    }
-    50% {
-      -webkit-transform: translateX(-1000px);
-              transform: translateX(-1000px);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: translateX(-1000px);
-              transform: translateX(-1000px);
-      opacity: 0;
     }
   }
   @keyframes slide {
-    0% {
+    from {
+      opacity: 1;
+      -webkit-transform: translateX(45px);
+              transform: translateX(45px);
+    }
+    to {
+      opacity: 1;
       -webkit-transform: translateX(0);
               transform: translateX(0);
-      opacity: 1;
-    }
-    50% {
-      -webkit-transform: translateX(-1000px);
-              transform: translateX(-1000px);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: translateX(-1000px);
-              transform: translateX(-1000px);
-      opacity: 0;
     }
   }
-  .fa-heart:hover {
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(50%), to(#FF79DA));
-    background: linear-gradient(#9356DC, 50%, #FF79DA);
-    -webkit-animation: filling-heart 5s ease-in-out;
-            animation: filling-heart 5s ease-in-out;
+  /*.fa-heart:hover {
+      background: linear-gradient( #9356DC, 50%, #FF79DA);
+      animation: filling-heart 5s ease-in-out;
+    }
+
+  .fa-heart {
+      color: white;
+      background-color: #FF79DA;
+      border-radius: 50%;
+      padding:.2em;
+  }
+  .fa-heart::before {
+      content: "\f004";
+      font-weight: bold;
+      transition: color 1s ease-out;
+  }
+  .fa-heart:hover::before{
+      color: #9356DC;
+      cursor: pointer;
+  }*/
+  .heart {
+    background-color: white;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: relative;
+    bottom: 65px;
+    left: 500px;
+  }
+  .heart::before, .heart::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .heart::before {
+    left: -10px;
+    border-left: solid 2px black;
+    border-top: solid 2px black;
+  }
+  .heart::after {
+    top: -10px;
+    border-top: solid 2px black;
+  }
+  .heart:hover::before {
+    -webkit-animation: filling-heart 5s ease-in-out both;
+            animation: filling-heart 5s ease-in-out both;
+  }
+  .heart:hover::after {
+    -webkit-animation: filling-heart 5s ease-in-out both;
+            animation: filling-heart 5s ease-in-out both;
+  }
+  .heart:hover {
+    -webkit-animation: filling-heart 5s ease-in-out both;
+            animation: filling-heart 5s ease-in-out both;
   }
   @-webkit-keyframes filling-heart {
     0% {
-      background-position: center 27px;
-      -webkit-transform: scale(1);
-              transform: scale(1);
-    }
-    58% {
-      background-position: center 0px;
-      -webkit-text-stroke-color: #9356DC;
-      -webkit-transform: scale(1);
-              transform: scale(1);
-    }
-    60% {
-      -webkit-text-stroke-color: #FF79DA;
-      -webkit-transform: scale(1.2);
-              transform: scale(1.2);
-    }
-    80% {
-      -webkit-transform: scale(1.15);
-              transform: scale(1.15);
+      background-color: white;
+      -webkit-transform: rotate(45deg) scale(1);
+              transform: rotate(45deg) scale(1);
     }
     100% {
-      background-position: center 0px;
-      -webkit-text-stroke-color: #FF79DA;
-      -webkit-transform: scale(1.1);
-              transform: scale(1.1);
+      background-color: blueviolet;
+      -webkit-transform: rotate(45deg) scale(1.1);
+              transform: rotate(45deg) scale(1.1);
     }
   }
   @keyframes filling-heart {
     0% {
-      background-position: center 27px;
-      -webkit-transform: scale(1);
-              transform: scale(1);
-    }
-    58% {
-      background-position: center 0px;
-      -webkit-text-stroke-color: #9356DC;
-      -webkit-transform: scale(1);
-              transform: scale(1);
-    }
-    60% {
-      -webkit-text-stroke-color: #FF79DA;
-      -webkit-transform: scale(1.2);
-              transform: scale(1.2);
-    }
-    80% {
-      -webkit-transform: scale(1.15);
-              transform: scale(1.15);
+      background-color: white;
+      -webkit-transform: rotate(45deg) scale(1);
+              transform: rotate(45deg) scale(1);
     }
     100% {
-      background-position: center 0px;
-      -webkit-text-stroke-color: #FF79DA;
-      -webkit-transform: scale(1.1);
-              transform: scale(1.1);
+      background-color: blueviolet;
+      -webkit-transform: rotate(45deg) scale(1.1);
+              transform: rotate(45deg) scale(1.1);
+    }
+  }
+  .starter {
+    -webkit-animation: menu-load 5s ease-in-out both;
+            animation: menu-load 5s ease-in-out both;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  .main_dish {
+    -webkit-animation: menu-load 5s ease-in-out both;
+            animation: menu-load 5s ease-in-out both;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+  }
+  .desserts {
+    -webkit-animation: menu-load 5s ease-in-out both;
+            animation: menu-load 5s ease-in-out both;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+  }
+  @-webkit-keyframes menu-load {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes menu-load {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 }
@@ -205,22 +269,28 @@
     height: 120px;
     -webkit-animation: spin 5s linear both;
     animation: spin 5s linear both;
-    position: fixed;
-    left: 120px;
-    top: 400px;
-    z-index: 9999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    z-index: 2;
   }
   #overlay {
-    position: absolute;
-    top: 0px;
-    left: 0px;
+    position: fixed;
+    display: block;
     width: 100%;
-    height: 150%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: white;
     opacity: 1;
-    z-index: 9999;
+    z-index: 2;
     -webkit-animation: overlay 5s both;
-            animation: overlay 5s both;
+    animation: overlay 5s both;
   }
   @-webkit-keyframes overlay {
     0% {
@@ -278,57 +348,6 @@
       opacity: 0;
     }
   }
-  .fa-check-circle:hover {
-    color: white;
-    background-color: #99E2D0;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    bottom: 20px;
-    overflow: hidden;
-    -webkit-animation: slide 10s ease-in-out;
-    animation: slide 10s ease-in-out;
-  }
-  @-webkit-keyframes slide {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 1;
-    }
-    50% {
-      -webkit-transform: translateX(-1000px);
-              transform: translateX(-1000px);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: translateX(-1000px);
-              transform: translateX(-1000px);
-      opacity: 0;
-    }
-  }
-  @keyframes slide {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 1;
-    }
-    50% {
-      -webkit-transform: translateX(-1000px);
-              transform: translateX(-1000px);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: translateX(-1000px);
-              transform: translateX(-1000px);
-      opacity: 0;
-    }
-  }
-  .fa-heart:hover {
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(50%), to(#FF79DA));
-    background: linear-gradient(#9356DC, 50%, #FF79DA);
-    -webkit-animation: filling-heart 5s ease-in-out;
-            animation: filling-heart 5s ease-in-out;
-  }
   @-webkit-keyframes filling-heart {
     0% {
       background-position: center 27px;
@@ -384,6 +403,57 @@
       -webkit-transform: scale(1.1);
               transform: scale(1.1);
     }
+  }
+  .starter {
+    -webkit-animation: menu-load 5s ease-in-out both;
+            animation: menu-load 5s ease-in-out both;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  .main_dish {
+    -webkit-animation: menu-load 5s ease-in-out both;
+            animation: menu-load 5s ease-in-out both;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+  }
+  .desserts {
+    -webkit-animation: menu-load 5s ease-in-out both;
+            animation: menu-load 5s ease-in-out both;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+  }
+  @-webkit-keyframes menu-load {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes menu-load {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .restaurant-menu_blocs__btn :hover + .price span {
+    color: white;
+    background-color: #99E2D0;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0;
+    height: 35px;
+    position: relative;
+    bottom: 20px;
+    -webkit-animation: slide 0.5s ease alternate both;
+            animation: slide 0.5s ease alternate both;
+  }
+  .price span {
+    display: inline-block;
+    opacity: 0;
   }
 }
 
@@ -457,7 +527,6 @@ h4 {
     text-align: center;
     position: relative;
     left: 20%;
-    margin-bottom: 15px;
   }
   .presentation-bloc__description--bold {
     font-weight: bold;
@@ -705,9 +774,8 @@ h4 {
     margin: 15px;
   }
   .restaurant-menu__btn--new {
-    position: relative;
-    bottom: 230px;
-    left: 450px;
+    -webkit-transform: translate(435px, -230px);
+            transform: translate(435px, -230px);
     width: 13%;
     background-color: #99E2D0;
     font-family: 'Roboto', sans-serif;
@@ -729,7 +797,7 @@ h4 {
   .restaurant-menu p {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    padding: 3px;
+    padding: 5px;
   }
   .restaurant-menu a {
     text-decoration: none;
@@ -922,11 +990,11 @@ html, body {
             flex-direction: column;
     border-radius: 30px 30px 0 0;
     position: relative;
-    bottom: 5px;
+    bottom: 100px;
     margin: auto;
     margin: auto;
-    margin-bottom: -5px;
-    padding-bottom: 20px;
+    margin-bottom: -100px;
+    padding-bottom: 50px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -938,10 +1006,11 @@ html, body {
     border-radius: 15px;
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    margin: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     padding: 0;
     background-color: white;
-    text-overflow: fade(5%);
+    text-overflow: ellipsis;
     overflow: hidden;
   }
   .restaurant-menu_blocs__btn--bold {
@@ -966,6 +1035,12 @@ html, body {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+  .starter {
+    margin-right: 45px;
+  }
+  .main_dish {
+    margin-right: 45px;
   }
   .order-btn {
     text-decoration: none;
