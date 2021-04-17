@@ -3,7 +3,9 @@ html, body {
     margin: 0;
     padding: 0;
 }
+/* Version Mobile*/
 @media all and (max-width: 699px) {
+/*Header*/
    .restaurant-header-bloc {
        &__logo {
         display: flex;
@@ -28,7 +30,7 @@ html, body {
 
         }
    } 
-
+/*Bloc menu*/
    .restaurant-menu_blocs {
        display: flex;
        flex-direction: column;
@@ -102,8 +104,9 @@ html, body {
        transform: translate(50%,35%);
    }
 }
-
+/*Version Desktop*/
 @media all and (min-width: 1200px) {
+    /*Header*/
     .restaurant-header-bloc {
         &__logo {
          display: flex;
@@ -128,7 +131,7 @@ html, body {
  
          }
     } 
- 
+    /*Bloc Menu*/
     .restaurant-menu_blocs {
         display: flex;
         flex-direction: column;
@@ -139,34 +142,58 @@ html, body {
          margin: auto;
          margin-bottom: -100px;
          padding-bottom: 50px;
-         align-items: center;
         & h2{
             @include shrikhand;
         }
      &__btn {
-         border-radius: 15px;
-         -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-         box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-         margin-bottom: 20px;
-         margin-top: 20px;
-         padding: 0;
-         background-color: white;
-         text-overflow: ellipsis;
-         overflow: hidden;
-         &--bold {
-             font-weight: bold;
-         }
+        border-radius: 15px;
+        -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding: 0;
+        background-color: white;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width : 450px;
+        height : 60px;
+        & span {
+            opacity: 0;
+            font-size: 20px;
+        }
+        &:hover{
+            span {
+            color :white;
+            background-color: #99E2D0;
+            padding-top: 25px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin:0;
+            width: 10%;
+            height : 100%;
+            text-align: center;
+            position: relative;
+            bottom: 35px;
+            -webkit-animation : slide 0.5s ease both;
+            animation: slide 0.5s ease both;
+            }
+        }
+        &--bold {
+            font-weight: bold;
+        }
      }
      &--title {
-         display: flex;
-         justify-content: space-around;
-         padding-left: 15px;
-     }
+        text-align: center;
+        display: flex;
+        justify-content:center;
+        padding-left: 15px;
+    }
      & p {
-         margin:0;
-         padding:5px;
-         @include roboto;
-     }
+        margin:0;
+        padding:5px;
+        @include roboto;
+    }
      &--detail {
         display: flex;
         justify-content: space-around;
@@ -184,24 +211,28 @@ html, body {
         color:black;
         border-radius: 30px;
         background: linear-gradient($color-secondary, 50%, $color-primary);
-         color: white; 
-         padding : 15px;
-         position : relative;
-         transform: translateX(5%);
-         width: 30%;
-         text-align: center;
-         margin: 25px;
+        color: white; 
+        padding : 15px;
+        position : relative;
+        transform: translateX(650px);
+        width: 30%;
+        text-align: center;
+        margin: 25px;
     }
     .upper-case {
-     text-transform: uppercase;
-     border-bottom: solid 4px $color-third;
-     width: 10%;
-     padding:0;
-     margin:0;
+        text-transform: uppercase;
+        border-bottom: solid 4px $color-third;
+        width: 10%;
+        padding:0;
+        margin:0;
  }
     .price {
         display: flex;
         justify-content: space-between;
+        & p{
+        text-overflow: ellipsis;
+        word-break: normal;
+        }
     }
  
     .heart-btn-menu {

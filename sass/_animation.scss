@@ -4,7 +4,7 @@
     position: relative;
     overflow: hidden;
   }
-
+/*Loading Spinner*/
   .loader {
     border: 16px solid #f7f7f7;
     border-radius: 50%;
@@ -93,143 +93,30 @@
       opacity: 0;
     }
   }
-
-  .restaurant-menu_blocs{
-    &__btn{
-      & :hover{
-      span {
-      color :white;
-      background-color: #99E2D0;
-      padding-top: 25px;
-      padding-bottom: 20px;
-      padding-right: 20px;
-      padding-left: 20px;
-      margin:0;
-      height:35px;
-      position: relative;
-      bottom: 8px;
-      animation: slide 10s ease alternate both;
-        }
-      }
-    }
-  }
-  & .price {
-      span {
-        opacity: 0;
-      }
-    }
-
-
-  
+/* Animation Slide des bouton du menu*/
+   
 @-webkit-keyframes slide {
-  from {
+  0% {
    opacity : 1;
    transform: translateX(45px);
  }
-  to {
+   100% {
     opacity:1;
     transform: translateX(0);
    }
 }
 
 @keyframes slide {
-       from {
-        opacity : 1;
-        transform: translateX(45px);
-      }
-       to {
-         opacity:1;
-         transform: translateX(0);
-        }
+  0% {
+    opacity : 1;
+    transform: translateX(45px);
   }
- 
-  
- /*.fa-heart:hover {
-      background: linear-gradient( #9356DC, 50%, #FF79DA);
-      animation: filling-heart 5s ease-in-out;
-    }
-
-  .fa-heart {
-      color: white;
-      background-color: #FF79DA;
-      border-radius: 50%;
-      padding:.2em;
-  }
-  .fa-heart::before {
-      content: "\f004";
-      font-weight: bold;
-      transition: color 1s ease-out;
-  }
-  .fa-heart:hover::before{
-      color: #9356DC;
-      cursor: pointer;
-  }*/
-  
-  
-  .heart {
-    background-color: white;
-    border-right: solid 2px black;
-    border-bottom: solid 2px black;
-    width: 15px;
-    height: 15px;
-    position: relative;
-    transform: rotate(45deg);
-    position: relative;
-    bottom: 65px;
-    left:500px;
-    
-    &::before, &::after {
-      content: "";
-      width: 15px;
-      height: 15px;
-      background-color:white;
-      position: absolute;
-      border-radius: 50%;
-    }
-    
-    &::before {
-      left: -10px;
-      border-left: solid 2px black;
-      border-top: solid 2px black;
-    }
-    &::after {
-      top: -10px;
-      border-top: solid 2px black;
-    }
-    &:hover::before {
-      animation: filling-heart 5s ease-in-out both;
-    }
-    &:hover::after {
-      animation: filling-heart 5s ease-in-out both;
-    }
-    &:hover{
-      animation: filling-heart 5s ease-in-out both;
-    }
-  }
-
-@-webkit-keyframes filling-heart {
-    0% { 		
-      background-color: white; 		
-        transform: rotate(45deg) scale(1); 	
-      } 	  
     100% {
-      background-color: blueviolet;
-      transform: rotate(45deg) scale(1.1);
+     opacity:1;
+     transform: translateX(0);
     }
-  
-  }
-
-  @keyframes filling-heart { 	
-
-    0% { 		
-      background-color: white; 		
-        transform: rotate(45deg) scale(1); 	
-      } 	  
-    100% {
-      background-color: blueviolet;
-      transform: rotate(45deg) scale(1.1);
-    }
-  }
+  }  
+/* Chargement du menu l'un apres l'autre*/
   .starter {
     animation : menu-load 5s ease-in-out both;
     animation-delay: 1s;
@@ -265,6 +152,7 @@
 }
 
 @media all and (max-width: 699px) { 
+  /*Loading Spinner*/
   .loader {
     border: 16px solid #f7f7f7;
     border-radius: 50%;
@@ -273,30 +161,30 @@
     border-bottom: 16px solid #99E2D0;
     width: 120px;
     height: 120px;
-    -webkit-animation: spin 5s linear both;
-    animation: spin 5s linear both;
+    -webkit-animation: spin 10s linear both;
+    animation: spin 10s linear both;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     z-index: 2;
   }
   
-#overlay{
-  position: fixed; 
-  display: block; 
-  width: 100%; 
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: white;
-  opacity: 1;
-  z-index: 2;
-  -webkit-animation: overlay 5s both;
-  animation: overlay 5s both;
+  #overlay{
+    position: fixed; 
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    opacity: 1;
+    z-index: 2;
+   -webkit-animation: overlay 10s both;
+    animation: overlay 10s both;
 }
 
 @-webkit-keyframes overlay {
@@ -308,6 +196,7 @@
   }
   100% {
     opacity: 0;
+    z-index: -10;
   }
 }
 @keyframes overlay {
@@ -319,12 +208,14 @@
   }
   100% {
     opacity: 0;
+    z-index: -10;
   }
 }
   @-webkit-keyframes spin {
     0% { 
       transform: rotate(0deg); 
       opacity:1;
+      
     }
     50% { 
       transform: rotate(360deg); 
@@ -335,7 +226,7 @@
       opacity: 0;
     }
   }
-  
+
   @keyframes spin {
     0% { 
       transform: rotate(0deg); 
@@ -350,114 +241,86 @@
       opacity: 0;
     }
   }
-  
-  
-  @-webkit-keyframes filling-heart {
-    0% { 		
-      background-position: center 27px; 		
-        transform: scale(1); 	
-      } 	
-  
-    58% { 		
-      background-position: center 0px; 		
-      -webkit-text-stroke-color:#9356DC; 		
-      transform: scale(1); 	
-    } 	
-  
-      60% { 		
-      -webkit-text-stroke-color:  #FF79DA;
-      transform: scale(1.2);
-    }
-  
-    80% {
-      transform: scale(1.15);
-    }
-  
-    100% {
-      background-position: center 0px;
-      -webkit-text-stroke-color:  #FF79DA;
-      transform: scale(1.1);
-    }
-  
-  }
-  @keyframes filling-heart { 	
-  0% { 		
-    background-position: center 27px; 		
-      transform: scale(1); 	
-    } 	
-  58% { 		
-    background-position: center 0px; 		
-    -webkit-text-stroke-color:#9356DC; 		
-    transform: scale(1); 	} 	
-    60% { 		
-    -webkit-text-stroke-color:  #FF79DA;
-		transform: scale(1.2);
-	}
-	80% {
-		transform: scale(1.15);
-	}
-	100% {
-		background-position: center 0px;
-		-webkit-text-stroke-color:  #FF79DA;
-		transform: scale(1.1);
-	}
-}
-
-.starter {
-  animation : menu-load 5s ease-in-out both;
-  animation-delay: 1s;
-}
-
-.main_dish {
-  animation : menu-load 5s ease-in-out both;
-  animation-delay: 3s;
-}
-
-.desserts{
-  animation : menu-load 5s ease-in-out both;
-  animation-delay: 5s;
-}
-
-@-webkit-keyframes menu-load {
-  from{
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes menu-load {
-  from{
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.restaurant-menu_blocs{
-  &__btn{
-    & :hover + .price {
-    span {
-    color :white;
-    background-color: #99E2D0;
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
-    margin:0;
-    height:35px;
-    position: relative;
-    bottom: 20px;
-    animation: slide 0.5s ease alternate both;
+/* Animation Slide des bouton du menu*/
+  .restaurant-menu_blocs{
+    &__btn{
+      &:active{
+      span {
+      color :white;
+      background-color: #99E2D0;
+      padding-top: 25px;
+      padding-bottom: 20px;
+      padding-right: 20px;
+      padding-left: 20px;
+      margin:0;
+      position: relative;
+      bottom: 8px;
+      -webkit-animation : slide 0.5s ease both;
+      animation: slide 0.5s ease both;
+        }
       }
     }
   }
+  & .price {
+      span {
+        opacity: 0;
+      }
+    }
+
+
+  
+@-webkit-keyframes slide {
+  0% {
+   opacity : 1;
+   transform: translateX(45px);
+ }
+   100% {
+    opacity:1;
+    transform: translateX(0);
+   }
 }
-.price {
-  span {
-    display: inline-block;
-    opacity: 0;
+
+@keyframes slide {
+  0% {
+    opacity : 1;
+    transform: translateX(45px);
   }
-}
+    100% {
+     opacity:1;
+     transform: translateX(0);
+    }
+  }  
+/* Chargement du menu l'un apres l'autre*/
+  .starter {
+    animation : menu-load 5s ease-in-out both;
+    animation-delay: 1s;
+  }
+
+  .main_dish {
+    animation : menu-load 5s ease-in-out both;
+    animation-delay: 3s;
+  }
+
+  .desserts{
+    animation : menu-load 5s ease-in-out both;
+    animation-delay: 5s;
+  }
+
+  @-webkit-keyframes menu-load {
+    from{
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes menu-load {
+    from{
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }

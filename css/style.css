@@ -4,11 +4,6 @@ html, body {
 }
 
 
-.fa-heart:hover {
-    fill:#9356DC;
-    stroke:  #FF79DA;
-}
-
 @media all and (max-width: 699px) {
     .restaurant-bloc {
         margin-top: 15px;
@@ -26,8 +21,12 @@ html, body {
         font-size: 20px;
         position: relative;
         left: 290px;
-        bottom: 60px;
+        bottom: 65px;
     }
+
+    .fa-heart:hover{
+        color:#9356DC !important;
+     }
 }
 
 @media all and (min-width: 1200px){
@@ -45,5 +44,9 @@ html, body {
         left: 90%;
         bottom: 60px;
     }
+    
+    .fa-heart:hover{
+        color:#9356DC !important;
+     }
 }
 

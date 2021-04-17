@@ -8,25 +8,25 @@ h4{
     padding-bottom: 15px;
     font-weight: normal;
 }
-
+/*Version Mobile*/
 @media all and (max-width: 699px) {
+    /*Header*/
     .header-bloc {
         text-align: center;
         z-index: 99998;
-        &__shadow{
+       
             -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
             box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); 
-        } 
+        
         & img {
             height: 50px;
             width: 50%;
             object-fit: contain;
         }
     }
-
+    /*Bloc Presentation*/
     .presentation-bloc {
         text-align: center;
-        z-index: 1;
         &__localisation {
             @include dark-header;
             & i {
@@ -59,7 +59,7 @@ h4{
             padding: 15px;
         }
     }
-
+    /*Bloc Fonctionnement*/
     .functionality{
         display: flex;
         flex-direction: column;
@@ -102,6 +102,7 @@ h4{
         }
         
     }
+    /*Bloc Restaurant*/
     .restaurant-menu {
         
         &_bloc {
@@ -153,7 +154,7 @@ h4{
             font-weight: bold;
         }
     }
-
+    /*Footer*/
     .footer_container{
         padding: 15px;
         & li{
