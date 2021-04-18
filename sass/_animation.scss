@@ -161,11 +161,11 @@
     border-bottom: 16px solid #99E2D0;
     width: 120px;
     height: 120px;
-    -webkit-animation: spin 10s linear both;
-    animation: spin 10s linear both;
+    -webkit-animation: spin 5s linear both;
+    animation: spin 5s linear both;
     position: absolute;
     top: 60%;
-    left: 50%;
+    left: 30%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     z-index: 2;
@@ -183,8 +183,8 @@
     background: white;
     opacity: 1;
     z-index: 2;
-   -webkit-animation: overlay 10s both;
-    animation: overlay 10s both;
+   -webkit-animation: overlay 5s both;
+    animation: overlay 5s both;
 }
 
 @-webkit-keyframes overlay {
@@ -242,52 +242,172 @@
     }
   }
 /* Animation Slide des bouton du menu*/
-  .restaurant-menu_blocs{
-    &__btn{
-      &:active{
-      span {
-      color :white;
-      background-color: #99E2D0;
-      padding-top: 25px;
-      padding-bottom: 20px;
-      padding-right: 20px;
-      padding-left: 20px;
-      margin:0;
-      position: relative;
-      bottom: 8px;
-      -webkit-animation : slide 0.5s ease both;
-      animation: slide 0.5s ease both;
-        }
-      }
-    }
-  }
-  & .price {
-      span {
-        opacity: 0;
-      }
-    }
-
-
-  
 @-webkit-keyframes slide {
   0% {
    opacity : 1;
-   transform: translateX(45px);
+   transform: translateX(20px);
  }
    100% {
     opacity:1;
-    transform: translateX(0);
+    transform: translateX(10px);
    }
 }
 
 @keyframes slide {
   0% {
     opacity : 1;
-    transform: translateX(45px);
+    transform: translateX(20px);
   }
     100% {
      opacity:1;
-     transform: translateX(0);
+     transform: translateX(10px);
+    }
+  }  
+/* Chargement du menu l'un apres l'autre*/
+  .starter {
+    animation : menu-load 5s ease-in-out both;
+    animation-delay: 1s;
+  }
+
+  .main_dish {
+    animation : menu-load 5s ease-in-out both;
+    animation-delay: 3s;
+  }
+
+  .desserts{
+    animation : menu-load 5s ease-in-out both;
+    animation-delay: 5s;
+  }
+
+  @-webkit-keyframes menu-load {
+    from{
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes menu-load {
+    from{
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@media all and (min-width: 700px) and (max-width: 1024px)
+{
+  .loader {
+    border: 16px solid #f7f7f7;
+    border-radius: 50%;
+    border-top: 16px solid #9356DC;
+    border-right: 16px solid #FF79DA;
+    border-bottom: 16px solid #99E2D0;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 5s linear both;
+    animation: spin 5s linear both;
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
+  #overlay{
+    position: fixed; 
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    opacity: 1;
+    z-index: 2;
+   -webkit-animation: overlay 5s both;
+    animation: overlay 5s both;
+}
+
+@-webkit-keyframes overlay {
+  0% { 
+    opacity:1;
+  }
+  50% { 
+    opacity:1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes overlay {
+  0% { 
+    opacity:1;
+  }
+  50% { 
+    opacity:1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+  @-webkit-keyframes spin {
+    0% { 
+      transform: rotate(0deg); 
+      opacity:1;
+      
+    }
+    50% { 
+      transform: rotate(360deg); 
+      opacity:1;
+    }
+    100% {
+      transform: rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes spin {
+    0% { 
+      transform: rotate(0deg); 
+      opacity:0;
+    }
+    50% { 
+      transform: rotate(360deg); 
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(360deg);
+      opacity: 0;
+    }
+  }
+/* Animation Slide des bouton du menu*/
+@-webkit-keyframes slide {
+  0% {
+   opacity : 1;
+   transform: translateX(20px);
+ }
+   100% {
+    opacity:1;
+    transform: translateX(10px);
+   }
+}
+
+@keyframes slide {
+  0% {
+    opacity : 1;
+    transform: translateX(20px);
+  }
+    100% {
+     opacity:1;
+     transform: translateX(10px);
     }
   }  
 /* Chargement du menu l'un apres l'autre*/

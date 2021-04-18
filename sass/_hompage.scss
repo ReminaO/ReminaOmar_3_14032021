@@ -14,10 +14,8 @@ h4{
     .header-bloc {
         text-align: center;
         z-index: 99998;
-       
-            -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
-            box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); 
-        
+        -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); 
         & img {
             height: 50px;
             width: 50%;
@@ -167,9 +165,9 @@ h4{
     }
 }
 
-
+/* Version Destop*/
 @media all and (min-width: 1200px) {
-    
+    /* Header*/
     .header-bloc {
         text-align: center;
         z-index: 99998;
@@ -183,7 +181,7 @@ h4{
             object-fit: contain;
         }
     }
-
+    /* Bloc presentation*/
     .presentation-bloc {
         text-align: center;
         z-index: 1;
@@ -219,7 +217,7 @@ h4{
             padding: 15px;
         }
     }
-
+/* Bloc fonctionnement*/
     .functionality{
         
         &__btn{
@@ -264,6 +262,7 @@ h4{
         }
         
     }
+    /* Bloc Restaurant*/
     .restaurant-menu {
         &_bloc {
             display: flex;
@@ -315,7 +314,175 @@ h4{
             font-weight: bold;
         }
     }
+    /* Footer*/
+    .footer_container{
+        padding: 15px;
+        & li{
+            padding:5px;
+        }
+        & i {
+            padding-right: 5px;
+            font-size:15px;
+        }
+    }
+}
 
+/* Partie Responsive Tablette*/
+@media all and (min-width: 700px) and (max-width: 1024px)
+{
+    #bloc_page
+    {
+        width: auto;
+    }
+
+    .header-bloc {
+        text-align: center;
+        z-index: 99998;
+        &__shadow {
+            -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); 
+        } 
+        & img {
+            height: 75px;
+            width: 50%;
+            object-fit: contain;
+        }
+    }
+    /* Bloc presentation*/
+    .presentation-bloc {
+        text-align: center;
+        z-index: 1;
+        &__localisation {
+            @include dark-header;
+            & i {
+                margin-right: 15px;
+            }
+            & p{
+                font-weight: bold;
+            }
+        }
+        &__description {
+            &--last {
+                border-radius: 30px;
+                background: linear-gradient($color-secondary, 50%, $color-primary);
+                color: white;  
+                width: 12em;
+                text-align: center; 
+                position : relative;
+                left:35%;
+                margin-bottom: 15px;
+            }
+            &--bold {
+                font-weight: bold;
+                font-size: 35px;
+            }
+        }
+        
+        & p {
+            @include  margin;
+            @include roboto;
+            padding: 15px;
+        }
+    }
+/* Bloc fonctionnement*/
+    .functionality{
+        
+        &__btn{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & :hover{
+                background-color:  lighten($color-primary, 30%);
+            }
+            &__menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            border-radius: 20px;
+            -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+            margin : 40px;
+            text-align: center;
+            width: 90%;
+            height: 50px;
+            background-color: $background-color;
+            }
+            &__number {
+                border-radius: 100px;
+                background-color: $color-primary;
+                padding: 5px 10px 5px 10px;
+                text-align: center;
+                font-size: 15px;
+                position: relative;
+                right:250px;
+                color:white;
+            }
+            & i{
+                position: relative;
+                right: 10%;
+            }
+        }
+        & p {
+            @include roboto;
+            display: inline;
+            line-height: 50px;
+        }
+        
+    }
+    /* Bloc Restaurant*/
+    .restaurant-menu {
+        &_bloc {
+            display: flex;
+            justify-content: center;
+        }
+        
+        &__btn {
+            height: 290px;
+            width : 30%;
+            margin : 15px;
+            &--new{
+                transform: translate(150px, -230px);
+                width: 30%;
+                background-color: $color-third;
+                @include roboto;
+                color: darken($color-third, 40%);
+                font-weight: bold;
+            }    
+        }
+        & img{
+        @include img-restaurant-home;
+        border-radius: 20px 20px 0 0;
+        -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+        padding: 0;
+        margin: 0;
+    }
+        & p {
+            @include  margin;
+            @include roboto;
+            padding: 5px;
+    }
+        & a{
+            text-decoration: none;
+            @include roboto;
+            color: black;
+        }
+    }
+    
+    .btn-color {
+        display:flex;
+        flex-direction: column;
+        border-radius: 0 0 20px 20px;
+        -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+        margin:0;
+        padding: 0;
+        &--bold {
+            font-weight: bold;
+        }
+    }
+    /* Footer*/
     .footer_container{
         padding: 15px;
         & li{

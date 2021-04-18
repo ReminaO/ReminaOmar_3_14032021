@@ -50,3 +50,23 @@ html, body {
      }
 }
 
+@media all and (min-width: 700px) and (max-width: 1024px)
+{ 
+    .heart-btn {
+        font-size: 20px;
+        position: relative;
+        left: 85%;
+        bottom: 35px;
+    }
+
+    .heart-btn-top {
+        font-size: 20px;
+        position: relative;
+        left: 85%;
+        bottom: 60px;
+    }
+    
+    .fa-heart:hover{
+        color:#9356DC !important;
+     }
+}

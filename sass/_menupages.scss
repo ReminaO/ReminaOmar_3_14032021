@@ -40,20 +40,47 @@ html, body {
         margin: auto;
         margin-bottom: -35px;
         padding-bottom: 35px;
+        text-overflow: ellipsis;
        & h2{
            @include shrikhand;
        }
     &__btn {
         border-radius: 15px;
-        width: auto;
         -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
         box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
         margin: 10px;
         padding: 10px;
         background-color: white;
+        height: 55px;
+        width: 330px;
+       
         &--bold {
             font-weight: bold;
         }
+        & span {
+            opacity: 0;
+            font-size: 20px;
+        }
+    &:hover{
+        & .price {
+            span {
+                color :white;
+                background-color: #99E2D0;
+                padding-top: 25px;
+                padding-bottom: 30px;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin:0;
+                object-position: right top ;
+                position: relative;
+                bottom: 34px;
+                -webkit-animation : slide 0.5s ease both;
+                animation: slide 0.5s ease both;
+                border-radius: 0 15px 15px 0;
+            }
+        }
+        
+      }
     }
     &--title {
         display: flex;
@@ -63,7 +90,7 @@ html, body {
             background: linear-gradient($color-secondary, 50%, $color-primary);
             margin: 0;
             padding: 0;
-           }
+         }
     }
     & p {
         margin:0;
@@ -71,7 +98,7 @@ html, body {
         @include roboto;
     }
    }
-
+    
    .order-btn {
        text-decoration: none;
        @include roboto;
@@ -138,7 +165,6 @@ html, body {
          border-radius: 30px 30px 0 0;
          position: relative;
          bottom:100px;
-         margin: auto;
          margin: auto;
          margin-bottom: -100px;
          padding-bottom: 50px;
@@ -242,3 +268,129 @@ html, body {
     }
  }
  
+ /* Partie Responsive Tablette*/
+@media all and (min-width: 700px) and (max-width: 1024px)
+{
+    /*Header*/
+   .restaurant-header-bloc {
+    &__logo {
+     display: flex;
+     justify-content: center;
+     &__img{
+        height: 50px;
+        width: 50%;
+        object-fit: contain;
+     }
+    }
+
+     &__img {
+        object-fit: cover;
+        height: 300px;
+        width: 100%;
+     }
+
+     & i {
+        position: relative;
+        transform: translate(-150%, 80%);
+        font-size: 20px;
+     }
+} 
+    /*Bloc menu*/
+    .restaurant-menu_blocs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 30px 30px 0 0;
+        position: relative;
+        bottom: 35px;
+        margin: auto;
+        margin-bottom: -35px;
+        padding-bottom: 35px;
+        text-overflow: ellipsis;
+        & h2{
+            @include shrikhand;
+        }
+    &__btn {
+        border-radius: 15px;
+        -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+        margin: 10px;
+        padding: 10px;
+        background-color: white;
+        height: 55px;
+        width: 330px;
+        
+        &--bold {
+            font-weight: bold;
+        }
+        & span {
+            opacity: 0;
+            font-size: 20px;
+        }
+    &:hover{
+        span {
+            color :white;
+            background-color: #99E2D0;
+            padding-top: 25px;
+            padding-bottom: 30px;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin:0;
+            object-position: right top ;
+            position: relative;
+            bottom: 34px;
+            -webkit-animation : slide 0.5s ease both;
+            animation: slide 0.5s ease both;
+            border-radius: 0 15px 15px 0;
+            }
+        }
+    }
+    &--title {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 5px;
+        & i:hover {
+            background: linear-gradient($color-secondary, 50%, $color-primary);
+            margin: 0;
+            padding: 0;
+        }
+    }
+    & p {
+        margin:0;
+        padding:2px;
+        @include roboto;
+    }
+    }
+    
+    .order-btn {
+        text-decoration: none;
+        @include roboto;
+        color:black;
+        border-radius: 30px;
+        background: linear-gradient($color-secondary, 50%, $color-primary);
+        color: white; 
+        padding : 15px;
+        position : relative;
+        transform: translateX(0);
+        width: 50%;
+        text-align: center;
+        margin: 25px;
+    }
+    .upper-case {
+    text-transform: uppercase;
+    border-bottom: solid 4px $color-third;
+    width: 10%;
+    }
+    .price {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .heart-btn-menu {
+        position: relative;
+        font-size: 25px;
+        margin:0;
+        padding: 0;
+        transform: translate(50%,35%);
+    }
+}
