@@ -5,6 +5,15 @@ html, body {
 
 
 @media all and (max-width: 699px) {
+    .shadow {
+        margin-bottom: 5px;
+        -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.8);
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.8); 
+    }
+    .space{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
     .restaurant-bloc {
         margin-top: 15px;
         padding-top: 20px;
@@ -30,7 +39,15 @@ html, body {
 }
 
 @media all and (min-width: 1200px){
-
+    .shadow {
+        margin-bottom: 5px;
+        -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.8);
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.8); 
+    }
+    .space{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
     .heart-btn {
         font-size: 20px;
         position: relative;
@@ -52,6 +69,21 @@ html, body {
 
 @media all and (min-width: 700px) and (max-width: 1024px)
 { 
+    .shadow {
+        margin-bottom: 5px;
+        -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.8);
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.8); 
+    }
+
+    .header-bloc {
+        z-index: 10;
+    }
+
+    .space{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
     .heart-btn {
         font-size: 20px;
         position: relative;

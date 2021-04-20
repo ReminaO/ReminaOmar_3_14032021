@@ -1,7 +1,15 @@
+h1{
+    @include roboto;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top : 0;
+}
+
 h2 {
     @include roboto;
     padding-left: 20px;
 }
+
 h4{
     @include shrikhand;
     margin:0px;
@@ -13,7 +21,6 @@ h4{
     /*Header*/
     .header-bloc {
         text-align: center;
-        z-index: 99998;
         -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
         box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); 
         & img {
@@ -35,7 +42,6 @@ h4{
             }
         }
         &__description {
-            
             &--last {
                 border-radius: 30px;
                 background: linear-gradient($color-secondary, 50%, $color-primary);
@@ -170,7 +176,6 @@ h4{
     /* Header*/
     .header-bloc {
         text-align: center;
-        z-index: 99998;
         &__shadow {
             -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
             box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); 
@@ -337,11 +342,6 @@ h4{
 
     .header-bloc {
         text-align: center;
-        z-index: 99998;
-        &__shadow {
-            -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
-            box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); 
-        } 
         & img {
             height: 75px;
             width: 50%;

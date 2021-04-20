@@ -488,6 +488,13 @@
   background-color: white;
 }
 
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 0;
+}
+
 h2 {
   font-family: 'Roboto', sans-serif;
   padding-left: 20px;
@@ -505,7 +512,6 @@ h4 {
   /*Header*/
   .header-bloc {
     text-align: center;
-    z-index: 99998;
     -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   }
@@ -679,7 +685,6 @@ h4 {
   /* Header*/
   .header-bloc {
     text-align: center;
-    z-index: 99998;
   }
   .header-bloc__shadow {
     -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
@@ -859,11 +864,6 @@ h4 {
   }
   .header-bloc {
     text-align: center;
-    z-index: 99998;
-  }
-  .header-bloc__shadow {
-    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   }
   .header-bloc img {
     height: 75px;
