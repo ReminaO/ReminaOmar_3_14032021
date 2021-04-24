@@ -122,14 +122,6 @@ html, body {
        display: flex;
        justify-content: space-between;
    }
-
-   .heart-btn-menu {
-       position: relative;
-       font-size: 25px;
-       margin:0;
-       padding: 0;
-       transform: translate(50%,35%);
-   }
 }
 /*Version Desktop*/
 @media all and (min-width: 1200px) {
@@ -260,12 +252,6 @@ html, body {
         word-break: normal;
         }
     }
- 
-    .heart-btn-menu {
-        position: relative;
-        transform: translate(150%,35%);
-        font-size: 25px;
-    }
  }
  
  /* Partie Responsive Tablette*/
@@ -384,13 +370,5 @@ html, body {
     .price {
         display: flex;
         justify-content: space-between;
-    }
-
-    .heart-btn-menu {
-        position: relative;
-        font-size: 25px;
-        margin:0;
-        padding: 0;
-        transform: translate(50%,35%);
     }
 }
