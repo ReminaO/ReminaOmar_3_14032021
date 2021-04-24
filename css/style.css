@@ -61,7 +61,7 @@ html, body {
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
       /*Configuration Coeur pages menu*/
       .icon_heart_menu:hover i.fa-heart {
@@ -209,7 +209,7 @@ html, body {
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
       /*Configuration Coeur pages menu*/
       .icon_heart_menu:hover i.fa-heart {
