@@ -102,7 +102,6 @@ html, body {
    .order-btn {
        text-decoration: none;
        @include roboto;
-       color:black;
        border-radius: 30px;
        background: linear-gradient($color-secondary, 50%, $color-primary);
         color: white; 
@@ -118,13 +117,20 @@ html, body {
     border-bottom: solid 4px $color-third;
     width: 10%;
 }
-   .price {
-       display: flex;
-       justify-content: space-between;
-   }
+.price {
+    display: flex;
+    justify-content: space-between;
+    &__ellipsis {
+        flex: 1;
+        min-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
 }
 /*Version Desktop*/
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1920px) {
     /*Header*/
     .restaurant-header-bloc {
         &__logo {
@@ -173,8 +179,8 @@ html, body {
         background-color: white;
         text-overflow: ellipsis;
         overflow: hidden;
-        width : 450px;
-        height : 60px;
+        width : 400px;
+        height : 55px;
         & span {
             opacity: 0;
             font-size: 20px;
@@ -226,7 +232,6 @@ html, body {
     .order-btn {
         text-decoration: none;
         @include roboto;
-        color:black;
         border-radius: 30px;
         background: linear-gradient($color-secondary, 50%, $color-primary);
         color: white; 
@@ -244,16 +249,151 @@ html, body {
         padding:0;
         margin:0;
  }
+ .price {
+    display: flex;
+    justify-content: space-between;
+    &__ellipsis {
+        flex: 1;
+        min-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+ }
+
+ /* Version PC Portable*/
+ @media all and (min-width: 1200px) and (max-width: 1919px) {
+     /*Header*/
+    .restaurant-header-bloc {
+        &__logo {
+         display: flex;
+         justify-content: center;
+         &__img{
+             height: 50px;
+             width: 50%;
+             object-fit: contain;
+         }
+        }
+ 
+         &__img {
+             object-fit: cover;
+             height: 400px;
+             width: 100%;
+         }
+ 
+         & i {
+             position: relative;
+             transform: translate(-150%, 80%);
+             font-size: 20px;
+         }
+    } 
+    /*Bloc Menu*/
+    .restaurant-menu_blocs {
+        display: flex;
+        flex-direction: column;
+        border-radius: 30px 30px 0 0;
+        position: relative;
+        bottom:100px;
+        margin: auto;
+        margin-bottom: -100px;
+        padding-bottom: 50px;
+        & h2{
+            @include shrikhand;
+        }
+     &__btn {
+        border-radius: 15px;
+        -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding: 0;
+        background-color: white;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width : 400px;
+        height : 55px;
+        & span {
+            opacity: 0;
+            font-size: 20px;
+        }
+        &:hover{
+            span {
+            color :white;
+            background-color: #99E2D0;
+            padding-top: 25px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin:0;
+            width: 10%;
+            height : 100%;
+            text-align: center;
+            position: relative;
+            bottom: 35px;
+            -webkit-animation : slide 0.5s ease both;
+            animation: slide 0.5s ease both;
+            }
+        }
+        &--bold {
+            font-weight: bold;
+        }
+     }
+     &--title {
+        text-align: center;
+        display: flex;
+        justify-content:center;
+        padding-left: 15px;
+    }
+     & p {
+        margin:0;
+        padding:5px;
+        @include roboto;
+    }
+     &--detail {
+        display: flex;
+        justify-content: space-around;
+    }
+    }
+    .starter {
+        margin-right: 40px;
+    }
+    .main_dish {
+        margin-right: 40px;
+    }
+    .order-btn {
+        text-decoration: none;
+        @include roboto;
+        border-radius: 30px;
+        background: linear-gradient($color-secondary, 50%, $color-primary);
+        color: white; 
+        padding : 15px;
+        position : relative;
+        transform: translateX(445px);
+        width: 30%;
+        text-align: center;
+        margin: 25px;
+    }
+    .upper-case {
+        text-transform: uppercase;
+        border-bottom: solid 4px $color-third;
+        width: 10%;
+        padding:0;
+        margin:0;
+ }
     .price {
         display: flex;
         justify-content: space-between;
-        & p{
-        text-overflow: ellipsis;
-        word-break: normal;
+        &__ellipsis {
+            flex: 1;
+            min-width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
  }
- 
+
  /* Partie Responsive Tablette*/
 @media all and (min-width: 700px) and (max-width: 1024px)
 {
@@ -351,7 +491,6 @@ html, body {
     .order-btn {
         text-decoration: none;
         @include roboto;
-        color:black;
         border-radius: 30px;
         background: linear-gradient($color-secondary, 50%, $color-primary);
         color: white; 
@@ -370,5 +509,12 @@ html, body {
     .price {
         display: flex;
         justify-content: space-between;
+        &__ellipsis {
+            flex: 1;
+            min-width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 }
