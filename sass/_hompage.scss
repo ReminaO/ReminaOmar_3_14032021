@@ -201,13 +201,14 @@ h4{
         }
         &__description {
             &--last {
+                
                 border-radius: 30px;
                 background: linear-gradient($color-secondary, 50%, $color-primary);
                 color: white;  
                 width: 12em;
                 text-align: center; 
-                position : relative;
-                left:45%;
+                position: relative;
+                left: 44%;
                 margin-bottom: 15px;
             }
             &--bold {

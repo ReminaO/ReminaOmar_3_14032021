@@ -14,10 +14,10 @@
     border-bottom: 16px solid #99E2D0;
     width: 120px;
     height: 120px;
-    -webkit-animation: spin 10s linear both;
-    animation: spin 10s linear both;
+    -webkit-animation: spin 5s linear both;
+    animation: spin 5s linear both;
     position: absolute;
-    top: 65%;
+    top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -36,8 +36,8 @@
     background: white;
     opacity: 1;
     z-index: 2;
-    -webkit-animation: overlay 10s both;
-    animation: overlay 10s both;
+    -webkit-animation: overlay 5s both;
+    animation: overlay 5s both;
   }
   @-webkit-keyframes overlay {
     0% {
@@ -95,6 +95,28 @@
       -webkit-transform: rotate(360deg);
               transform: rotate(360deg);
       opacity: 0;
+    }
+  }
+  .page_menu {
+    -webkit-animation: index-load 3s ease-in-out both;
+            animation: index-load 3s ease-in-out both;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+  }
+  @-webkit-keyframes index-load {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes index-load {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
   /* Animation Slide des bouton du menu*/
@@ -170,8 +192,8 @@
     border-bottom: 16px solid #99E2D0;
     width: 120px;
     height: 120px;
-    -webkit-animation: spin 10s linear both;
-    animation: spin 10s linear both;
+    -webkit-animation: spin 5s linear both;
+    animation: spin 5s linear both;
     position: absolute;
     top: 65%;
     left: 50%;
@@ -192,8 +214,8 @@
     background: white;
     opacity: 1;
     z-index: 2;
-    -webkit-animation: overlay 10s both;
-    animation: overlay 10s both;
+    -webkit-animation: overlay 5s both;
+    animation: overlay 5s both;
   }
   @-webkit-keyframes overlay {
     0% {
@@ -251,6 +273,28 @@
       -webkit-transform: rotate(360deg);
               transform: rotate(360deg);
       opacity: 0;
+    }
+  }
+  .page_menu {
+    -webkit-animation: index-load 3s ease-in-out both;
+            animation: index-load 3s ease-in-out both;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+  }
+  @-webkit-keyframes index-load {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes index-load {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
   /* Animation Slide des bouton du menu*/
@@ -407,6 +451,28 @@
       -webkit-transform: rotate(360deg);
               transform: rotate(360deg);
       opacity: 0;
+    }
+  }
+  .page_menu {
+    -webkit-animation: index-load 3s ease-in-out both;
+            animation: index-load 3s ease-in-out both;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+  }
+  @-webkit-keyframes index-load {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes index-load {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
   /* Animation Slide des bouton du menu*/
@@ -877,7 +943,7 @@ h4 {
     width: 12em;
     text-align: center;
     position: relative;
-    left: 45%;
+    left: 44%;
     margin-bottom: 15px;
   }
   .presentation-bloc__description--bold {
