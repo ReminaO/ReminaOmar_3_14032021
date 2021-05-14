@@ -658,4 +658,27 @@
       opacity: 1;
     }
   }
+
+  .page_menu{
+    animation : index-load 3s ease-in-out both;
+    animation-delay: 3s
+  }
+
+  @-webkit-keyframes index-load {
+    from{
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes index-load {
+    from{
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
