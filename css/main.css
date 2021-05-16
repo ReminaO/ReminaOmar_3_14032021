@@ -690,6 +690,28 @@
       opacity: 1;
     }
   }
+  .page_menu {
+    -webkit-animation: index-load 3s ease-in-out both;
+            animation: index-load 3s ease-in-out both;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+  }
+  @-webkit-keyframes index-load {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes index-load {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 .footer_container {
