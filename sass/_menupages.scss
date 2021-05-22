@@ -34,13 +34,13 @@ html, body {
    .restaurant-menu_blocs {
        display: flex;
        flex-direction: column;
+       align-items: center;
         border-radius: 30px 30px 0 0;
         position: relative;
         bottom: 35px;
         margin: auto;
         margin-bottom: -35px;
         padding-bottom: 35px;
-        text-overflow: ellipsis;
        & h2{
            @include shrikhand;
        }
@@ -78,6 +78,11 @@ html, body {
                 animation: slide 0.5s ease both;
                 border-radius: 0 15px 15px 0;
             }
+
+            i {
+                -webkit-animation: rotating 2s linear ;
+                animation: rotating 2s linear;
+            }
         }
         
       }
@@ -100,14 +105,14 @@ html, body {
    }
     
    .order-btn {
+       display: flex;
+       justify-content: center;
        text-decoration: none;
        @include roboto;
        border-radius: 30px;
        background: linear-gradient($color-secondary, 50%, $color-primary);
         color: white; 
         padding : 15px;
-        position : relative;
-        transform: translateX(25%);
         width: 50%;
         text-align: center;
         margin: 25px;
@@ -160,6 +165,7 @@ html, body {
     .restaurant-menu_blocs {
         display: flex;
         flex-direction: column;
+        align-items: center;
          border-radius: 30px 30px 0 0;
          position: relative;
          bottom:100px;
@@ -202,6 +208,11 @@ html, body {
             -webkit-animation : slide 0.5s ease both;
             animation: slide 0.5s ease both;
             }
+
+            i {
+                -webkit-animation: rotating 2s linear;
+                animation: rotating 2s linear;
+            }
         }
         &--bold {
             font-weight: bold;
@@ -230,14 +241,14 @@ html, body {
         margin-right: 45px;
     }
     .order-btn {
+        display: flex;
+        justify-content: center;
         text-decoration: none;
         @include roboto;
         border-radius: 30px;
         background: linear-gradient($color-secondary, 50%, $color-primary);
         color: white; 
         padding : 15px;
-        position : relative;
-        transform: translateX(650px);
         width: 30%;
         text-align: center;
         margin: 25px;
@@ -292,6 +303,7 @@ html, body {
     .restaurant-menu_blocs {
         display: flex;
         flex-direction: column;
+        align-items: center;
         border-radius: 30px 30px 0 0;
         position: relative;
         bottom:100px;
@@ -311,7 +323,7 @@ html, body {
         background-color: white;
         text-overflow: ellipsis;
         overflow: hidden;
-        width : 400px;
+        width : 350px;
         height : 55px;
         & span {
             opacity: 0;
@@ -333,6 +345,10 @@ html, body {
             bottom: 35px;
             -webkit-animation : slide 0.5s ease both;
             animation: slide 0.5s ease both;
+            }
+            i {
+                -webkit-animation: rotating 2s linear ;
+                animation: rotating 2s linear;
             }
         }
         &--bold {
@@ -362,16 +378,16 @@ html, body {
         margin-right: 40px;
     }
     .order-btn {
+        display: flex;
+        justify-content: center;
+        text-align: center;
         text-decoration: none;
         @include roboto;
         border-radius: 30px;
         background: linear-gradient($color-secondary, 50%, $color-primary);
         color: white; 
         padding : 15px;
-        position : relative;
-        transform: translateX(445px);
         width: 30%;
-        text-align: center;
         margin: 25px;
     }
     .upper-case {
@@ -395,7 +411,7 @@ html, body {
  }
 
  /* Partie Responsive Tablette*/
-@media all and (min-width: 700px) and (max-width: 1024px)
+@media all and (min-width: 700px) and (max-width: 1199px)
 {
     /*Header*/
    .restaurant-header-bloc {
@@ -469,6 +485,11 @@ html, body {
             animation: slide 0.5s ease both;
             border-radius: 0 15px 15px 0;
             }
+
+            i {
+                -webkit-animation: rotating 2s linear ;
+                animation: rotating 2s linear;
+            }
         }
     }
     &--title {
@@ -489,16 +510,15 @@ html, body {
     }
     
     .order-btn {
+        display: flex;
+        justify-content: center;
         text-decoration: none;
         @include roboto;
         border-radius: 30px;
         background: linear-gradient($color-secondary, 50%, $color-primary);
         color: white; 
         padding : 15px;
-        position : relative;
-        transform: translateX(0);
         width: 50%;
-        text-align: center;
         margin: 25px;
     }
     .upper-case {

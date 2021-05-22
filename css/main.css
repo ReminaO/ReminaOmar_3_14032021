@@ -144,6 +144,26 @@
               transform: translateX(0);
     }
   }
+  @-webkit-keyframes rotating {
+    0% {
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+    100% {
+      -webkit-transform: rotate(20deg);
+      transform: rotate(20deg);
+    }
+  }
+  @keyframes rotating {
+    0% {
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+    100% {
+      -webkit-transform: rotate(20deg);
+      transform: rotate(20deg);
+    }
+  }
   /* Chargement du menu l'un apres l'autre*/
   .starter {
     -webkit-animation: menu-load 5s ease-in-out both;
@@ -320,6 +340,26 @@
       opacity: 1;
       -webkit-transform: translateX(0);
               transform: translateX(0);
+    }
+  }
+  @-webkit-keyframes rotating {
+    0% {
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+    100% {
+      -webkit-transform: rotate(20deg);
+      transform: rotate(20deg);
+    }
+  }
+  @keyframes rotating {
+    0% {
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+    100% {
+      -webkit-transform: rotate(20deg);
+      transform: rotate(20deg);
     }
   }
   /* Chargement du menu l'un apres l'autre*/
@@ -500,6 +540,26 @@
               transform: translateX(10px);
     }
   }
+  @-webkit-keyframes rotating {
+    0% {
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+    100% {
+      -webkit-transform: rotate(20deg);
+      transform: rotate(20deg);
+    }
+  }
+  @keyframes rotating {
+    0% {
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+    100% {
+      -webkit-transform: rotate(20deg);
+      transform: rotate(20deg);
+    }
+  }
   /* Chargement du menu l'un apres l'autre*/
   .starter {
     -webkit-animation: menu-load 5s ease-in-out both;
@@ -538,7 +598,7 @@
 }
 
 /*version Tablette */
-@media all and (min-width: 700px) and (max-width: 1024px) {
+@media all and (min-width: 700px) and (max-width: 1199px) {
   .loader {
     border: 16px solid #f7f7f7;
     border-radius: 50%;
@@ -653,6 +713,26 @@
       opacity: 1;
       -webkit-transform: translateX(10px);
               transform: translateX(10px);
+    }
+  }
+  @-webkit-keyframes rotating {
+    0% {
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+    100% {
+      -webkit-transform: rotate(20deg);
+      transform: rotate(20deg);
+    }
+  }
+  @keyframes rotating {
+    0% {
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+    100% {
+      -webkit-transform: rotate(20deg);
+      transform: rotate(20deg);
     }
   }
   /* Chargement du menu l'un apres l'autre*/
@@ -781,6 +861,18 @@ h4 {
   .presentation-bloc__localisation p {
     font-weight: bold;
   }
+  .presentation-bloc__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .presentation-bloc__description--last {
     border-radius: 30px;
     background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(50%), to(#9356DC));
@@ -788,8 +880,6 @@ h4 {
     color: white;
     width: 12em;
     text-align: center;
-    position: relative;
-    left: 20%;
   }
   .presentation-bloc__description--bold {
     font-weight: bold;
@@ -826,14 +916,13 @@ h4 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     border-radius: 20px;
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     margin: 20px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: relative;
     background-color: #f7f7f7;
   }
   .functionality__btn__number {
@@ -842,10 +931,10 @@ h4 {
     padding: 5px 10px 5px 10px;
     text-align: center;
     font-size: 15px;
-    position: absolute;
-    right: 315px;
-    top: -3px;
     color: white;
+  }
+  .functionality__btn__image {
+    padding-right: 70px;
   }
   .functionality__btn i {
     position: relative;
@@ -957,6 +1046,18 @@ h4 {
   .presentation-bloc__localisation p {
     font-weight: bold;
   }
+  .presentation-bloc__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .presentation-bloc__description--last {
     border-radius: 30px;
     background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(50%), to(#9356DC));
@@ -964,8 +1065,6 @@ h4 {
     color: white;
     width: 12em;
     text-align: center;
-    position: relative;
-    left: 44%;
     margin-bottom: 15px;
   }
   .presentation-bloc__description--bold {
@@ -998,9 +1097,9 @@ h4 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     border-radius: 20px;
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
@@ -1016,9 +1115,10 @@ h4 {
     padding: 5px 10px 5px 10px;
     text-align: center;
     font-size: 15px;
-    position: relative;
-    right: 190px;
     color: white;
+  }
+  .functionality__btn__image {
+    padding-right: 70px;
   }
   .functionality__btn i {
     position: relative;
@@ -1134,6 +1234,18 @@ h4 {
   .presentation-bloc__localisation p {
     font-weight: bold;
   }
+  .presentation-bloc__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .presentation-bloc__description--last {
     border-radius: 30px;
     background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(50%), to(#9356DC));
@@ -1141,8 +1253,6 @@ h4 {
     color: white;
     width: 12em;
     text-align: center;
-    position: relative;
-    left: 42%;
     margin-bottom: 15px;
   }
   .presentation-bloc__description--bold {
@@ -1175,9 +1285,9 @@ h4 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     border-radius: 20px;
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
@@ -1193,9 +1303,10 @@ h4 {
     padding: 5px 10px 5px 10px;
     text-align: center;
     font-size: 15px;
-    position: relative;
-    right: 100px;
     color: white;
+  }
+  .functionality__btn__image {
+    padding-right: 80px;
   }
   .functionality__btn i {
     position: relative;
@@ -1282,7 +1393,7 @@ h4 {
 }
 
 /* Partie Responsive Tablette*/
-@media all and (min-width: 700px) and (max-width: 1024px) {
+@media all and (min-width: 700px) and (max-width: 1199px) {
   #bloc_page {
     width: auto;
   }
@@ -1309,6 +1420,18 @@ h4 {
   .presentation-bloc__localisation p {
     font-weight: bold;
   }
+  .presentation-bloc__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .presentation-bloc__description--last {
     border-radius: 30px;
     background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(50%), to(#9356DC));
@@ -1316,8 +1439,6 @@ h4 {
     color: white;
     width: 12em;
     text-align: center;
-    position: relative;
-    left: 35%;
     margin-bottom: 15px;
   }
   .presentation-bloc__description--bold {
@@ -1353,9 +1474,9 @@ h4 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     border-radius: 20px;
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
@@ -1371,9 +1492,10 @@ h4 {
     padding: 5px 10px 5px 10px;
     text-align: center;
     font-size: 15px;
-    position: relative;
-    right: 250px;
     color: white;
+  }
+  .functionality__btn__image {
+    padding-right: 400px;
   }
   .functionality__btn i {
     position: relative;
@@ -1502,13 +1624,15 @@ html, body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-radius: 30px 30px 0 0;
     position: relative;
     bottom: 35px;
     margin: auto;
     margin-bottom: -35px;
     padding-bottom: 35px;
-    text-overflow: ellipsis;
   }
   .restaurant-menu_blocs h2 {
     font-family: 'Shrikhand', cursive;
@@ -1546,6 +1670,10 @@ html, body {
     animation: slide 0.5s ease both;
     border-radius: 0 15px 15px 0;
   }
+  .restaurant-menu_blocs__btn:hover .price i {
+    -webkit-animation: rotating 2s linear;
+    animation: rotating 2s linear;
+  }
   .restaurant-menu_blocs--title {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1566,6 +1694,12 @@ html, body {
     font-family: 'Roboto', sans-serif;
   }
   .order-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     border-radius: 30px;
@@ -1573,9 +1707,6 @@ html, body {
     background: linear-gradient(#FF79DA, 50%, #9356DC);
     color: white;
     padding: 15px;
-    position: relative;
-    -webkit-transform: translateX(25%);
-            transform: translateX(25%);
     width: 50%;
     text-align: center;
     margin: 25px;
@@ -1642,6 +1773,9 @@ html, body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-radius: 30px 30px 0 0;
     position: relative;
     bottom: 100px;
@@ -1685,6 +1819,10 @@ html, body {
     -webkit-animation: slide 0.5s ease both;
     animation: slide 0.5s ease both;
   }
+  .restaurant-menu_blocs__btn:hover i {
+    -webkit-animation: rotating 2s linear;
+    animation: rotating 2s linear;
+  }
   .restaurant-menu_blocs__btn--bold {
     font-weight: bold;
   }
@@ -1717,6 +1855,12 @@ html, body {
     margin-right: 45px;
   }
   .order-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     border-radius: 30px;
@@ -1724,9 +1868,6 @@ html, body {
     background: linear-gradient(#FF79DA, 50%, #9356DC);
     color: white;
     padding: 15px;
-    position: relative;
-    -webkit-transform: translateX(650px);
-            transform: translateX(650px);
     width: 30%;
     text-align: center;
     margin: 25px;
@@ -1795,6 +1936,9 @@ html, body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-radius: 30px 30px 0 0;
     position: relative;
     bottom: 100px;
@@ -1815,7 +1959,7 @@ html, body {
     background-color: white;
     text-overflow: ellipsis;
     overflow: hidden;
-    width: 400px;
+    width: 350px;
     height: 55px;
   }
   .restaurant-menu_blocs__btn span {
@@ -1837,6 +1981,10 @@ html, body {
     bottom: 35px;
     -webkit-animation: slide 0.5s ease both;
     animation: slide 0.5s ease both;
+  }
+  .restaurant-menu_blocs__btn:hover i {
+    -webkit-animation: rotating 2s linear;
+    animation: rotating 2s linear;
   }
   .restaurant-menu_blocs__btn--bold {
     font-weight: bold;
@@ -1870,6 +2018,13 @@ html, body {
     margin-right: 40px;
   }
   .order-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     border-radius: 30px;
@@ -1877,11 +2032,7 @@ html, body {
     background: linear-gradient(#FF79DA, 50%, #9356DC);
     color: white;
     padding: 15px;
-    position: relative;
-    -webkit-transform: translateX(445px);
-            transform: translateX(445px);
     width: 30%;
-    text-align: center;
     margin: 25px;
   }
   .upper-case {
@@ -1911,7 +2062,7 @@ html, body {
 }
 
 /* Partie Responsive Tablette*/
-@media all and (min-width: 700px) and (max-width: 1024px) {
+@media all and (min-width: 700px) and (max-width: 1199px) {
   /*Header*/
   .restaurant-header-bloc__logo {
     display: -webkit-box;
@@ -1995,6 +2146,10 @@ html, body {
     animation: slide 0.5s ease both;
     border-radius: 0 15px 15px 0;
   }
+  .restaurant-menu_blocs__btn:hover i {
+    -webkit-animation: rotating 2s linear;
+    animation: rotating 2s linear;
+  }
   .restaurant-menu_blocs--title {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2015,6 +2170,12 @@ html, body {
     font-family: 'Roboto', sans-serif;
   }
   .order-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     border-radius: 30px;
@@ -2022,11 +2183,7 @@ html, body {
     background: linear-gradient(#FF79DA, 50%, #9356DC);
     color: white;
     padding: 15px;
-    position: relative;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
     width: 50%;
-    text-align: center;
     margin: 25px;
   }
   .upper-case {

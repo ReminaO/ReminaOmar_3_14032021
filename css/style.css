@@ -157,7 +157,7 @@ html, body {
       
 }
 /*Version tablette */
-@media all and (min-width: 700px) and (max-width: 1024px)
+@media all and (min-width: 700px) and (max-width: 1199px)
 { 
   .lighten_hover:hover {
     background: linear-gradient(#ff79da, 80%,  #9356dc);
