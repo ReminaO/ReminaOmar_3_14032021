@@ -936,6 +936,9 @@ h4 {
   .functionality__btn__image {
     padding-right: 70px;
   }
+  .functionality__btn__image2 {
+    padding-right: 80px;
+  }
   .functionality__btn i {
     position: relative;
     top: 35%;
@@ -1118,6 +1121,9 @@ h4 {
     color: white;
   }
   .functionality__btn__image {
+    padding-right: 150px;
+  }
+  .functionality__btn__image2 {
     padding-right: 150px;
   }
   .functionality__btn i {
@@ -1306,6 +1312,9 @@ h4 {
     color: white;
   }
   .functionality__btn__image {
+    padding-right: 100px;
+  }
+  .functionality__btn__image2 {
     padding-right: 100px;
   }
   .functionality__btn i {
@@ -1497,9 +1506,15 @@ h4 {
   .functionality__btn__image {
     padding-right: 250px;
   }
+  .functionality__btn__image2 {
+    padding-right: 250px;
+  }
   .functionality__btn i {
     position: relative;
     right: 10%;
+  }
+  .functionality .fa-mobile-alt {
+    padding-right: 15px;
   }
   .functionality p {
     font-family: 'Roboto', sans-serif;

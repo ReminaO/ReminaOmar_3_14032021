@@ -96,6 +96,9 @@ h4{
             &__image {
                 padding-right: 70px;
             }
+            &__image2 {
+                padding-right: 80px;
+            }
             & i{
                 position: relative;
                 top: 35%;
@@ -259,6 +262,9 @@ h4{
             &__image{
                 padding-right: 150px;
             }
+            &__image2 {
+                padding-right: 150px;
+            }
             & i{
                 position: relative;
                 right: 10%;
@@ -419,6 +425,9 @@ h4{
                 color:white;
             }
             &__image {
+                padding-right: 100px;
+            }
+            &__image2 {
                 padding-right: 100px;
             }
             & i{
@@ -585,10 +594,16 @@ h4{
             &__image {
                 padding-right: 250px;
             }
+            &__image2 {
+                padding-right: 250px;
+            }
             & i{
                 position: relative;
                 right: 10%;
             }
+        }
+        .fa-mobile-alt {
+            padding-right: 15px;
         }
         & p {
             @include roboto;
