@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Shrikhand&display=swap");
 /*Version desktop*/
 @media all and (min-width: 1920px) {
@@ -199,6 +200,120 @@
       opacity: 1;
     }
   }
+  /*configuration Coeur index*/
+  .icon_heart:hover i.fa-heart {
+    display: none;
+  }
+  .icon_heart:hover i.fas.fa-heart {
+    display: block;
+  }
+  .icon_heart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    font-size: 2rem;
+    margin: 1.2rem 0 2rem 7rem;
+    position: relative;
+    bottom: 60px;
+    right: 35px;
+  }
+  .icon_heart_top:hover i.fa-heart {
+    display: none;
+  }
+  .icon_heart_top:hover i.fas.fa-heart {
+    display: block;
+  }
+  .icon_heart_top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    font-size: 2rem;
+    margin: 1.2rem 0 2rem 7rem;
+    position: relative;
+    bottom: 90px;
+    right: 35px;
+  }
+  /*configuration coeur général*/
+  i.fa-heart:hover {
+    cursor: pointer;
+    border: 0 solid transparent;
+  }
+  i.fas.fa-heart {
+    display: none;
+    background: white;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), color-stop(50%, #ac48af), to(#ff79da));
+    background: linear-gradient(180deg, white 50%, #ac48af 50%, #ff79da 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 100% 200%;
+    color: transparent;
+    font-size: 2rem;
+    -webkit-animation: filling-heart 0.5s ease-in-out both;
+            animation: filling-heart 0.5s ease-in-out both;
+  }
+  /*Configuration Coeur pages menu*/
+  .icon_heart_menu:hover i.fa-heart {
+    display: none;
+  }
+  .icon_heart_menu:hover i.fas.fa-heart {
+    display: block;
+  }
+  .icon_heart_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    font-size: 2rem;
+    margin: 1.2rem 0 2rem 7rem;
+  }
+  @-webkit-keyframes filling-heart {
+    0% {
+      background-position: top;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      background-position: bottom;
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+    100% {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ac48af), to(#ff79da));
+      background: linear-gradient(#ac48af 50%, #ff79da 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes filling-heart {
+    0% {
+      background-position: top;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      background-position: bottom;
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+    100% {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ac48af), to(#ff79da));
+      background: linear-gradient(#ac48af 50%, #ff79da 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
 }
 
 /*Version Pc portbale*/
@@ -395,6 +510,119 @@
     }
     to {
       opacity: 1;
+    }
+  }
+  /*configuration Coeur index*/
+  .icon_heart:hover i.fa-heart {
+    display: none;
+  }
+  .icon_heart:hover i.fas.fa-heart {
+    display: block;
+  }
+  .icon_heart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    font-size: 2rem;
+    margin: 1.2rem 0 2rem 7rem;
+    position: relative;
+    bottom: 60px;
+    right: 35px;
+  }
+  .icon_heart_top:hover i.fa-heart {
+    display: none;
+  }
+  .icon_heart_top:hover i.fas.fa-heart {
+    display: block;
+  }
+  .icon_heart_top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    font-size: 2rem;
+    margin: 1.2rem 0 2rem 7rem;
+    position: relative;
+    bottom: 90px;
+    right: 35px;
+  }
+  /*configuration coeur général*/
+  i.fa-heart:hover {
+    cursor: pointer;
+    border: 0 solid transparent;
+  }
+  i.fas.fa-heart {
+    display: none;
+    background: white;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), color-stop(50%, #ac48af), to(#ff79da));
+    background: linear-gradient(180deg, white 50%, #ac48af 50%, #ff79da 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+    -webkit-animation: filling-heart 0.5s ease-in-out both;
+            animation: filling-heart 0.5s ease-in-out both;
+  }
+  /*Configuration Coeur pages menu*/
+  .icon_heart_menu:hover i.fa-heart {
+    display: none;
+  }
+  .icon_heart_menu:hover i.fas.fa-heart {
+    display: block;
+  }
+  .icon_heart_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    font-size: 2rem;
+    margin: 1.2rem 0 2rem 7rem;
+  }
+  @-webkit-keyframes filling-heart {
+    0% {
+      background-position: top;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      background-position: bottom;
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+    100% {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ac48af), to(#ff79da));
+      background: linear-gradient(#ac48af 50%, #ff79da 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes filling-heart {
+    0% {
+      background-position: top;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      background-position: bottom;
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+    100% {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ac48af), to(#ff79da));
+      background: linear-gradient(#ac48af 50%, #ff79da 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-transform: scale(1);
+              transform: scale(1);
     }
   }
 }
@@ -595,6 +823,121 @@
       opacity: 1;
     }
   }
+  /*configuration Coeur index*/
+  .icon_heart:hover i.fa-heart {
+    display: none;
+  }
+  .icon_heart:hover i.fas.fa-heart {
+    display: block;
+  }
+  .icon_heart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    font-size: 1.5rem;
+    margin: 1.2rem 0 2rem 7rem;
+    position: relative;
+    bottom: 55px;
+    right: 35px;
+  }
+  .icon_heart_top:hover i.fa-heart {
+    display: none;
+  }
+  .icon_heart_top:hover i.fas.fa-heart {
+    display: block;
+  }
+  .icon_heart_top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    font-size: 1.5rem;
+    margin: 1.2rem 0 2rem 7rem;
+    position: relative;
+    bottom: 80px;
+    right: 35px;
+  }
+  /*configuration coeur général*/
+  i.fa-heart:hover {
+    cursor: pointer;
+    border: 0 solid transparent;
+  }
+  i.fas.fa-heart {
+    display: none;
+    background: white;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), color-stop(50%, #ac48af), to(#ff79da));
+    background: linear-gradient(180deg, white 50%, #ac48af 50%, #ff79da 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+    -webkit-animation: filling-heart 0.5s ease-in-out both;
+            animation: filling-heart 0.5s ease-in-out both;
+  }
+  /*Configuration Coeur pages menu*/
+  .icon_heart_menu:hover i.fa-heart {
+    display: none;
+  }
+  .icon_heart_menu:hover i.fas.fa-heart {
+    display: block;
+  }
+  .icon_heart_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    font-size: 1.5rem;
+    margin: 1.2rem 0 2rem 7rem;
+    position: relative;
+    right: 20px;
+  }
+  @-webkit-keyframes filling-heart {
+    0% {
+      background-position: top;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      background-position: bottom;
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+    100% {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ac48af), to(#ff79da));
+      background: linear-gradient(#ac48af 50%, #ff79da 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes filling-heart {
+    0% {
+      background-position: top;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      background-position: bottom;
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+    100% {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ac48af), to(#ff79da));
+      background: linear-gradient(#ac48af 50%, #ff79da 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
 }
 
 /*version Tablette */
@@ -790,6 +1133,119 @@
     }
     to {
       opacity: 1;
+    }
+  }
+  /*configuration Coeur index*/
+  .icon_heart:hover i.fa-heart {
+    display: none;
+  }
+  .icon_heart:hover i.fas.fa-heart {
+    display: block;
+  }
+  .icon_heart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    font-size: 1.5rem;
+    margin: 1.2rem 0 2rem 7rem;
+    position: relative;
+    bottom: 60px;
+    right: 35px;
+  }
+  .icon_heart_top:hover i.fa-heart {
+    display: none;
+  }
+  .icon_heart_top:hover i.fas.fa-heart {
+    display: block;
+  }
+  .icon_heart_top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    font-size: 1.5rem;
+    margin: 1.2rem 0 2rem 7rem;
+    position: relative;
+    bottom: 90px;
+    right: 35px;
+  }
+  /*configuration coeur général*/
+  i.fa-heart:hover {
+    cursor: pointer;
+    border: 0 solid transparent;
+  }
+  i.fas.fa-heart {
+    display: none;
+    background: white;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), color-stop(50%, #ac48af), to(#ff79da));
+    background: linear-gradient(180deg, white 50%, #ac48af 50%, #ff79da 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+    -webkit-animation: filling-heart 0.5s ease-in-out both;
+            animation: filling-heart 0.5s ease-in-out both;
+  }
+  /*Configuration Coeur pages menu*/
+  .icon_heart_menu:hover i.fa-heart {
+    display: none;
+  }
+  .icon_heart_menu:hover i.fas.fa-heart {
+    display: block;
+  }
+  .icon_heart_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    font-size: 1.5rem;
+    margin: 1.2rem 0 2rem 7rem;
+  }
+  @-webkit-keyframes filling-heart {
+    0% {
+      background-position: top;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      background-position: bottom;
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+    100% {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ac48af), to(#ff79da));
+      background: linear-gradient(#ac48af 50%, #ff79da 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes filling-heart {
+    0% {
+      background-position: top;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      background-position: bottom;
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+    100% {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ac48af), to(#ff79da));
+      background: linear-gradient(#ac48af 50%, #ff79da 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-transform: scale(1);
+              transform: scale(1);
     }
   }
 }

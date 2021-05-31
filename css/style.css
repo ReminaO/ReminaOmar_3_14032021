@@ -22,65 +22,7 @@ html, body {
         padding-top: 20px;
     }
 
-    /*configuration Coeur index*/
-    .icon_heart:hover i.fa-heart {
-        display: none;
-      }
-      .icon_heart:hover i.fas.fa-heart {
-        display: block;
-      }
-      .icon_heart {
-        display: flex;
-        justify-content: flex-end;
-        font-size: 1.5rem;
-        margin: 1.2rem 0 2rem 7rem;
-        position: relative;
-        bottom: 55px;
-        right: 35px;
-      }
-      .icon_heart_top:hover i.fa-heart {
-        display: none;
-      }
-      .icon_heart_top:hover i.fas.fa-heart {
-        display: block;
-      }
-      .icon_heart_top {
-        display: flex;
-        justify-content: flex-end;
-        font-size: 1.5rem;
-        margin: 1.2rem 0 2rem 7rem;
-        position: relative;
-        bottom: 80px;
-        right: 35px;
-      }
-      /*configuration coeur général*/
-      i.fa-heart:hover {
-        cursor: pointer;
-        border: 0 solid transparent;
-      }
-      i.fas.fa-heart {
-        display: none;
-        background: linear-gradient(to bottom, #9356dc, #ff79da);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        font-size: 1.5rem;
-      }
-      /*Configuration Coeur pages menu*/
-      .icon_heart_menu:hover i.fa-heart {
-        display: none;
-      }
-      .icon_heart_menu:hover i.fas.fa-heart {
-        display: block;
-      }
-      .icon_heart_menu {
-        display: flex;
-        justify-content: flex-end;
-        font-size: 1.5rem;
-        margin: 1.2rem 0 2rem 7rem;
-        position: relative;
-        right: 20px;
-      }
+    
 }
 /* Version desktop */
 @media all and (min-width: 1920px){
@@ -97,63 +39,6 @@ html, body {
         padding-top: 30px;
         padding-bottom: 30px;
     }
- /*configuration Coeur index*/
-     .icon_heart:hover i.fa-heart {
-        display: none;
-      }
-      .icon_heart:hover i.fas.fa-heart {
-        display: block;
-      }
-      .icon_heart {
-        display: flex;
-        justify-content: flex-end;
-        font-size: 2rem;
-        margin: 1.2rem 0 2rem 7rem;
-        position: relative;
-        bottom: 60px;
-        right: 35px;
-      }
-      .icon_heart_top:hover i.fa-heart {
-        display: none;
-      }
-      .icon_heart_top:hover i.fas.fa-heart {
-        display: block;
-      }
-      .icon_heart_top {
-        display: flex;
-        justify-content: flex-end;
-        font-size: 2rem;
-        margin: 1.2rem 0 2rem 7rem;
-        position: relative;
-        bottom: 90px;
-        right: 35px;
-      }
-      /*configuration coeur général*/
-      i.fa-heart:hover {
-        cursor: pointer;
-        border: 0 solid transparent;
-      }
-      i.fas.fa-heart {
-        display: none;
-        background: linear-gradient(to bottom, #9356dc, #ff79da);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        font-size: 2rem;
-      }
-      /*Configuration Coeur pages menu*/
-      .icon_heart_menu:hover i.fa-heart {
-        display: none;
-      }
-      .icon_heart_menu:hover i.fas.fa-heart {
-        display: block;
-      }
-      .icon_heart_menu {
-        display: flex;
-        justify-content: flex-end;
-        font-size: 2rem;
-        margin: 1.2rem 0 2rem 7rem;
-      }
       
 }
 /*Version tablette */
@@ -177,63 +62,6 @@ html, body {
       padding-bottom: 30px;
   }
   
-  /*configuration Coeur index*/
-  .icon_heart:hover i.fa-heart {
-      display: none;
-    }
-    .icon_heart:hover i.fas.fa-heart {
-      display: block;
-    }
-    .icon_heart {
-      display: flex;
-      justify-content: flex-end;
-      font-size: 1.5rem;
-      margin: 1.2rem 0 2rem 7rem;
-      position: relative;
-      bottom: 60px;
-      right: 35px;
-    }
-    .icon_heart_top:hover i.fa-heart {
-      display: none;
-    }
-    .icon_heart_top:hover i.fas.fa-heart {
-      display: block;
-    }
-    .icon_heart_top {
-      display: flex;
-      justify-content: flex-end;
-      font-size: 1.5rem;
-      margin: 1.2rem 0 2rem 7rem;
-      position: relative;
-      bottom: 90px;
-      right: 35px;
-    }
-    /*configuration coeur général*/
-    i.fa-heart:hover {
-      cursor: pointer;
-      border: 0 solid transparent;
-    }
-    i.fas.fa-heart {
-      display: none;
-      background: linear-gradient(to bottom, #9356dc, #ff79da);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      font-size: 1.5rem;
-    }
-    /*Configuration Coeur pages menu*/
-    .icon_heart_menu:hover i.fa-heart {
-      display: none;
-    }
-    .icon_heart_menu:hover i.fas.fa-heart {
-      display: block;
-    }
-    .icon_heart_menu {
-      display: flex;
-      justify-content: flex-end;
-      font-size: 1.5rem;
-      margin: 1.2rem 0 2rem 7rem;
-    }
 }
 /* Version Pc Portable*/
 @media all and (min-width: 1200px) and (max-width: 1919px) {
@@ -257,61 +85,4 @@ html, body {
     padding-bottom: 30px;
 }
 
-/*configuration Coeur index*/
-.icon_heart:hover i.fa-heart {
-    display: none;
-  }
-  .icon_heart:hover i.fas.fa-heart {
-    display: block;
-  }
-  .icon_heart {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 2rem;
-    margin: 1.2rem 0 2rem 7rem;
-    position: relative;
-    bottom: 60px;
-    right: 35px;
-  }
-  .icon_heart_top:hover i.fa-heart {
-    display: none;
-  }
-  .icon_heart_top:hover i.fas.fa-heart {
-    display: block;
-  }
-  .icon_heart_top {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 2rem;
-    margin: 1.2rem 0 2rem 7rem;
-    position: relative;
-    bottom: 90px;
-    right: 35px;
-  }
-  /*configuration coeur général*/
-  i.fa-heart:hover {
-    cursor: pointer;
-    border: 0 solid transparent;
-  }
-  i.fas.fa-heart {
-    display: none;
-    background: linear-gradient(to bottom, #9356dc, #ff79da);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    font-size: 2rem;
-  }
-  /*Configuration Coeur pages menu*/
-  .icon_heart_menu:hover i.fa-heart {
-    display: none;
-  }
-  .icon_heart_menu:hover i.fas.fa-heart {
-    display: block;
-  }
-  .icon_heart_menu {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 2rem;
-    margin: 1.2rem 0 2rem 7rem;
-  }
 }
